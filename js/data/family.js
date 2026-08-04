@@ -1,0 +1,104 @@
+/**
+ * Data Keluarga Rasulullah ﷺ (Istri-Istri & Putra-Putri)
+ */
+
+export const WIVES = [
+  {
+    n: "Khadijah binti Khuwailid", meta: "Istri pertama · Mekah, sebelum kenabian", ph: "makkah",
+    b: [
+      "Dinikahi ketika Rasulullah berusia dua puluh lima tahun dan Khadijah empat puluh tahun. Selama beliau hidup bersamanya, Rasulullah tidak menikah dengan perempuan lain.",
+      "Perempuan pertama yang beriman, penopang saat wahyu pertama turun, dan pemilik rumah tempat keluarga itu tumbuh. Seluruh putra-putri Nabi lahir darinya, kecuali Ibrahim.",
+      "Wafat pada tahun kesepuluh kenabian — tahun yang sama dengan wafatnya Abu Thalib."
+    ]
+  },
+  {
+    n: "Saudah binti Zam'ah", meta: "Syawal, tahun 10 kenabian", ph: "makkah",
+    b: [
+      "Dinikahi sekitar sebulan setelah wafatnya Khadijah — istri pertama sesudah masa duka itu.",
+      "Sebelumnya menikah dengan Sakran bin Amr, anak pamannya sendiri, yang wafat setelah keduanya berhijrah ke Habasyah.",
+      "Wafat di Madinah pada bulan Syawal tahun 54 H."
+    ]
+  },
+  {
+    n: "Aisyah binti Abu Bakar", meta: "Syawal, tahun 11 kenabian", ph: "makkah",
+    b: [
+      "Satu-satunya istri Nabi yang belum pernah menikah sebelumnya, dan yang paling beliau cintai.",
+      "Paling menguasai ilmu fikih di kalangan perempuan dan secara keseluruhan paling cerdas — periwayatan hadis darinya menjadi salah satu sumber utama pengetahuan tentang kehidupan rumah tangga Nabi.",
+      "Di kamarnyalah Rasulullah dirawat pada masa sakit terakhir, wafat, dan dimakamkan. Ia wafat pada 17 Ramadhan tahun 57 atau 58 H dan dimakamkan di Baqi'."
+    ]
+  },
+  {
+    n: "Hafshah binti Umar", meta: "Sya'ban, 3 H", ph: "madinah",
+    b: [
+      "Menjanda setelah suaminya, Khunais bin Hudzafah as-Sahmi, wafat antara Perang Badar dan Uhud.",
+      "Dinikahi Rasulullah setelah masa iddahnya berakhir. Naskah pertama Al-Qur'an yang dihimpun pada masa Abu Bakar kelak disimpan padanya.",
+      "Wafat di Madinah pada Sya'ban tahun 45 H dalam usia enam puluh tahun, dimakamkan di Baqi'."
+    ]
+  },
+  {
+    n: "Zainab binti Khuzaimah", meta: "4 H · Ummul Masakin", ph: "madinah",
+    b: [
+      "Berasal dari Bani Hilal bin Amir. Dijuluki <em>Ummul Masakin</em> — ibu orang-orang miskin — karena kasih sayang dan kemurahan hatinya kepada mereka.",
+      "Sebelumnya istri Abdullah bin Jahsy yang gugur di Perang Uhud.",
+      "Hanya dua atau tiga bulan mendampingi Rasulullah sebelum wafat pada Rabi'ul Akhir 4 H. Nabi sendiri yang menyalati dan memakamkannya di Baqi'."
+    ]
+  },
+  {
+    n: "Ummu Salamah Hindun", meta: "Syawal, 4 H", ph: "madinah",
+    b: [
+      "Istri Abu Salamah, sahabat yang wafat pada Jumadil Akhir 4 H meninggalkan beberapa anak.",
+      "Termasuk perempuan ahli fikih yang sangat cerdas. Sarannya pada peristiwa Hudaibiyah — agar Nabi lebih dulu mencukur dan menyembelih tanpa banyak bicara — menyelesaikan kebuntuan seluruh rombongan.",
+      "Wafat pada tahun 59 atau 62 H dalam usia delapan puluh empat tahun, dimakamkan di Baqi'."
+    ]
+  },
+  {
+    n: "Zainab binti Jahsy", meta: "Dzulqa'dah, 5 H (sebagian: 4 H)", ph: "madinah",
+    b: [
+      "Putri bibi Rasulullah, berasal dari Bani Asad bin Khuzaimah. Sebelumnya menikah dengan Zaid bin Haritsah, yang dahulu dianggap sebagai anak angkat Nabi.",
+      "Pernikahan ini menghapus tradisi jahiliah yang menyamakan anak angkat dengan anak kandung — persoalan yang dijelaskan langsung dalam Surah al-Ahzab.",
+      "Perempuan yang sangat gemar beribadah dan bersedekah. Ia wafat tahun 20 H dalam usia lima puluh tiga tahun — istri pertama yang menyusul Rasulullah; Umar bin Khaththab menyalati jenazahnya."
+    ]
+  },
+  {
+    n: "Juwairiyah binti Harits", meta: "Sya'ban, 6 H (sebagian: 5 H)", ph: "madinah",
+    b: [
+      "Putri pemimpin Bani Mushthaliq. Awalnya menjadi tawanan milik Tsabit bin Qais, lalu membuat perjanjian tebusan untuk membebaskan dirinya.",
+      "Rasulullah membayar tebusan itu dan menikahinya. Kaum Muslimin lantas membebaskan seratus tawanan Bani Mushthaliq dengan alasan mereka kini terhitung kerabat Rasulullah — pernikahan yang berbuah pembebasan massal.",
+      "Wafat pada Rabi'ul Awwal tahun 56 H dalam usia sekitar enam puluh lima tahun."
+    ]
+  },
+  {
+    n: "Ummu Habibah Ramlah", meta: "Muharram, 7 H · dinikahkan di Habasyah", ph: "madinah",
+    b: [
+      "Putri Abu Sufyan. Berhijrah ke Habasyah bersama suaminya, Abdullah bin Jahsy, yang kemudian berpindah agama dan wafat di sana — meninggalkannya seorang diri di negeri asing dengan tetap memegang teguh imannya.",
+      "Rasulullah mengutus Amr bin Umayyah adh-Dhamri membawa surat kepada Najasyi sekaligus pinangan untuknya. Najasyi menikahkan mereka dan memberikan maskawin empat ratus dinar.",
+      "Rumah tangga mereka mulai dijalani setelah Rasulullah pulang dari Khaibar. Ia wafat sekitar tahun 42–50 H."
+    ]
+  },
+  {
+    n: "Shafiyah binti Huyay", meta: "7 H · setelah Khaibar", ph: "madinah",
+    b: [
+      "Putri Huyay bin Akhthab, pemimpin Yahudi Bani Nadhir. Menjadi tawanan Perang Khaibar sebelum Rasulullah memilihnya untuk diri beliau.",
+      "Ketika ditawari Islam, ia menerimanya dengan baik. Rasulullah lalu memerdekakannya dan menjadikan kemerdekaan itu sebagai maskawinnya.",
+      "Pernikahan diawali di Saddi Shahba', sekitar dua belas mil dari Khaibar, dalam perjalanan pulang ke Madinah. Ia wafat sekitar tahun 50 H dan dimakamkan di Baqi'."
+    ]
+  },
+  {
+    n: "Maimunah binti Harits", meta: "Dzulqa'dah, 7 H · Umrah Qadha'", ph: "madinah",
+    b: [
+      "Saudara perempuan Ummul Fadhl Lubabah binti Harits, sehingga pernikahan ini mengikat kekerabatan yang luas dengan kabilah-kabilah sekitar Mekah.",
+      "Menurut pendapat yang sahih, Rasulullah menikahinya pada bulan Dzulqa'dah dalam rangkaian Umrah Qadha'.",
+      "Istri terakhir yang beliau nikahi."
+    ]
+  }
+];
+
+export const KIDS = [
+  { n: "Qasim", meta: "Putra · dari Khadijah", b: ["Anak pertama, dan dari namanyalah kunyah Rasulullah diambil: <em>Abul Qasim</em>. Wafat pada masa kanak-kanak."] },
+  { n: "Zainab", meta: "Putri · dari Khadijah", b: ["Menikah dengan Abul Ash bin Rabi'. Kisah perjalanan hijrahnya ke Madinah dan kembalinya sang suami kepada Islam menjadi salah satu bagian paling menyentuh dalam sirah."] },
+  { n: "Ruqayyah", meta: "Putri · dari Khadijah", b: ["Menikah dengan Utsman bin Affan dan berhijrah bersamanya ke Habasyah lalu ke Madinah. Wafat saat Perang Badar sedang berlangsung, sehingga Utsman tidak ikut serta dan tetap dicatat mendapat bagian pahala Badar."] },
+  { n: "Ummu Kultsum", meta: "Putri · dari Khadijah", b: ["Dinikahkan dengan Utsman bin Affan setelah wafatnya Ruqayyah — karena menikahi dua putri Nabi secara berurutan, Utsman dijuluki <em>Dzun Nurain</em>, pemilik dua cahaya."] },
+  { n: "Fathimah", meta: "Putri · dari Khadijah", b: ["Menikah dengan Ali bin Abu Thalib pada masa antara Perang Badar dan Uhud. Dari pernikahan ini lahir <strong>Hasan</strong>, <strong>Husain</strong>, Zainab, dan Ummu Kultsum.", "Satu-satunya anak yang masih hidup ketika Rasulullah wafat; ia menyusul sang ayah sekitar enam bulan kemudian."] },
+  { n: "Abdullah", meta: "Putra · dari Khadijah", b: ["Dijuluki <em>ath-Thayyib</em> dan <em>ath-Thahir</em>. Wafat pada masa kanak-kanak seperti saudara-saudara lelakinya."] },
+  { n: "Ibrahim", meta: "Putra · dari Mariyah al-Qibthiyah", b: ["Satu-satunya anak yang tidak lahir dari Khadijah, lahir di Madinah pada tahun 8 H.", "Wafat pada usia sekitar delapan belas bulan. Ketika matahari gerhana pada hari wafatnya dan orang-orang mengaitkan keduanya, Rasulullah menegaskan bahwa gerhana adalah tanda kekuasaan Allah yang tidak terjadi karena kematian atau kelahiran siapa pun."] }
+];

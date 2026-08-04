@@ -1,0 +1,612 @@
+/* ============================================================
+   COMPONENTS — Silsilah, Cards, Details, Timeline, War, Tree
+   ============================================================ */
+
+/* ---------- Silsilah (Nasab) ---------- */
+.silsilah {
+  background: var(--lapis-900);
+  border: 1px solid rgba(198, 161, 91, .32);
+  padding: 30px 24px;
+  margin: 8px 0 12px;
+}
+
+.silsilah__hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.silsilah__t {
+  font-family: var(--f-display);
+  color: var(--gold-bright);
+  font-size: 19px;
+}
+
+.silsilah__n {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  color: rgba(216, 210, 194, .55);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.chain {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  position: relative;
+}
+
+.chain::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--gold), rgba(198, 161, 91, .18));
+}
+
+.node {
+  position: relative;
+  padding: 0 0 0 44px;
+  margin-bottom: 2px;
+}
+
+.node__btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 7px 8px 7px 0;
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: #D8D2C2;
+  transition: color .16s;
+}
+
+.node__btn:hover {
+  color: var(--gold-bright);
+}
+
+.node__dot {
+  position: absolute;
+  left: 6px;
+  top: 13px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--lapis-900);
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .18s;
+}
+
+.node__dot::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: .5;
+  transition: opacity .18s;
+}
+
+.node.is-open .node__dot {
+  background: var(--gold);
+}
+
+.node.is-open .node__dot::after {
+  opacity: 0;
+}
+
+.node.is-key .node__dot {
+  width: 19px;
+  height: 19px;
+  left: 4px;
+  top: 11px;
+  border-width: 2px;
+}
+
+.node.is-key .node__btn {
+  font-family: var(--f-display);
+  font-size: 19px;
+  color: var(--gold-bright);
+}
+
+.node__note {
+  display: none;
+  padding: 4px 0 14px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(216, 210, 194, .72);
+  border-left: 1px solid rgba(198, 161, 91, .25);
+  padding-left: 14px;
+  margin-left: -2px;
+}
+
+.node.is-open .node__note {
+  display: block;
+}
+
+.node__note em {
+  color: var(--gold-bright);
+  font-style: normal;
+}
+
+.chain--tail .node__btn {
+  font-size: 14px;
+  color: rgba(216, 210, 194, .62);
+}
+
+/* ---------- Grid & Kartu ---------- */
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+}
+
+.grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+}
+
+.card {
+  background: var(--paper-2);
+  border: 1px solid var(--paper-3);
+  border-radius: var(--r);
+  padding: 18px 19px;
+  position: relative;
+}
+
+.card__ttl {
+  font-family: var(--f-display);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 4px;
+}
+
+.card__meta {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--rubric);
+  margin-bottom: 10px;
+}
+
+.card__b {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.card__b + .card__b {
+  margin-top: 9px;
+}
+
+.card__tag {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border: 1px solid var(--paper-3);
+  background: var(--paper);
+  color: var(--ink-2);
+  padding: 2px 7px;
+  border-radius: 20px;
+  margin: 10px 6px 0 0;
+}
+
+.card--makkah {
+  border-left: 3px solid var(--rubric);
+}
+
+.card--madinah {
+  border-left: 3px solid var(--verdigris);
+}
+
+.card--gold {
+  border-left: 3px solid var(--gold);
+}
+
+/* ---------- Details / Expandable ---------- */
+details.exp {
+  background: var(--paper-2);
+  border: 1px solid var(--paper-3);
+  border-radius: var(--r);
+  margin-bottom: 10px;
+}
+
+details.exp > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 15px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  font-family: var(--f-display);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+details.exp > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.exp > summary::after {
+  content: "+";
+  margin-left: auto;
+  font-family: var(--f-mono);
+  font-size: 17px;
+  color: var(--rubric);
+  font-weight: 400;
+}
+
+details.exp[open] > summary::after {
+  content: "–";
+}
+
+details.exp[open] > summary {
+  border-bottom: 1px solid var(--paper-3);
+}
+
+.exp__yr {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: var(--rubric);
+  flex: 0 0 auto;
+}
+
+.exp__body {
+  padding: 16px 18px 18px;
+  font-size: 14.8px;
+  color: var(--ink-2);
+}
+
+.exp__body p {
+  margin: 0 0 11px;
+}
+
+.exp__body ul {
+  margin: 0 0 11px;
+  padding-left: 19px;
+}
+
+.exp__body li {
+  margin-bottom: 6px;
+}
+
+.exp__body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- Linimasa (Timeline) ---------- */
+.tl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.tl::before {
+  content: "";
+  position: absolute;
+  left: 56px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--paper-3);
+}
+
+.tl__i {
+  position: relative;
+  padding: 0 0 22px 84px;
+}
+
+.tl__yr {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 46px;
+  text-align: right;
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  color: var(--rubric);
+  line-height: 1.6;
+}
+
+.tl__i::after {
+  content: "";
+  position: absolute;
+  left: 52px;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--rubric);
+}
+
+.tl__i--gold::after {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.tl__t {
+  font-family: var(--f-display);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 3px;
+}
+
+.tl__d {
+  font-size: 14.5px;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* ---------- Filter Chips ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 22px;
+}
+
+.chip {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  background: var(--paper-2);
+  border: 1px solid var(--paper-3);
+  color: var(--ink-2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .16s;
+}
+
+.chip:hover {
+  border-color: var(--rubric);
+  color: var(--rubric);
+}
+
+.chip.is-on {
+  background: var(--lapis);
+  border-color: var(--lapis);
+  color: var(--gold-bright);
+}
+
+/* ---------- Peperangan (War) ---------- */
+.war {
+  border: 1px solid var(--paper-3);
+  border-radius: var(--r);
+  background: var(--paper-2);
+  margin-bottom: 9px;
+  overflow: hidden;
+}
+
+.war > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 17px;
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.war > summary::-webkit-details-marker {
+  display: none;
+}
+
+.war__yr {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--rubric);
+  font-weight: 500;
+}
+
+.war__nm {
+  font-family: var(--f-display);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.war__nm small {
+  display: block;
+  font-family: var(--f-body);
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--ink-3);
+  margin-top: 2px;
+  letter-spacing: 0;
+}
+
+.war__ty {
+  font-family: var(--f-mono);
+  font-size: 9.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.war__ty--g {
+  background: rgba(158, 59, 46, .11);
+  color: var(--rubric);
+}
+
+.war__ty--s {
+  background: rgba(60, 106, 91, .12);
+  color: var(--verdigris);
+}
+
+.war__body {
+  padding: 2px 17px 18px 83px;
+  font-size: 14.6px;
+  color: var(--ink-2);
+  border-top: 1px solid var(--paper-3);
+}
+
+.war__body p {
+  margin: 13px 0 10px;
+}
+
+.war__body ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.war__body li {
+  margin-bottom: 6px;
+}
+
+.war__body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.war[open] .war__nm {
+  color: var(--lapis);
+}
+
+/* ---------- Pohon Bani Hasyim ---------- */
+.tree {
+  background: var(--paper-2);
+  border: 1px solid var(--paper-3);
+  padding: 24px 20px;
+  border-radius: var(--r);
+}
+
+.tree__lvl {
+  margin-bottom: 22px;
+}
+
+.tree__lbl {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 9px;
+}
+
+.tree__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.pill {
+  font-size: 13.5px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--paper);
+  border: 1px solid var(--paper-3);
+  color: var(--ink-2);
+}
+
+.pill--k {
+  background: var(--lapis);
+  border-color: var(--lapis);
+  color: var(--gold-bright);
+  font-family: var(--f-display);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pill--g {
+  border-color: var(--gold);
+  color: var(--ink);
+  background: rgba(198, 161, 91, .16);
+}
+
+.pill--r {
+  border-color: rgba(158, 59, 46, .4);
+  color: var(--rubric);
+}
+
+/* ---------- Notes / Quotes / Utility ---------- */
+.note {
+  border-left: 2px solid var(--gold);
+  padding: 2px 0 2px 16px;
+  margin: 22px 0;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.src {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  color: var(--ink-3);
+  letter-spacing: .04em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.empty {
+  padding: 26px;
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 14.5px;
+  background: var(--paper-2);
+  border: 1px dashed var(--paper-3);
+  border-radius: var(--r);
+}
+
+@media (max-width: 1000px) {
+  .war > summary {
+    grid-template-columns: 46px 1fr;
+    gap: 11px;
+  }
+  .war__ty {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 4px;
+  }
+  .war__body {
+    padding-left: 20px;
+  }
+  .tl::before {
+    left: 44px;
+  }
+  .tl__i {
+    padding-left: 66px;
+  }
+  .tl__yr {
+    width: 36px;
+    font-size: 10.5px;
+  }
+  .tl__i::after {
+    left: 40px;
+  }
+  .node {
+    padding-left: 38px;
+  }
+}
+
+@media print {
+  details {
+    display: block;
+  }
+}

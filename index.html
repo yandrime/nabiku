@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sirah Nabawiyah — Perjalanan Hidup Rasulullah ﷺ</title>
+  <meta name="description" content="Ringkasan interaktif perjalanan hidup Rasulullah ﷺ dari nasab, keluarga Bani Hasyim, kenabian, hijrah, peperangan, hingga wafatnya beliau berdasarkan Ar-Rahiq al-Makhtum.">
+  <meta name="theme-color" content="#0B1729">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+
+<!-- ============ TOP BAR (Mobile) ============ -->
+<header class="topbar">
+  <button class="topbar__btn" id="menuBtn" aria-expanded="false" aria-controls="rail">Daftar isi</button>
+  <span class="topbar__t">Sirah Nabawiyah</span>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<!-- ============ RAIL (Sidebar Navigasi) ============ -->
+<nav class="rail" id="rail" aria-label="Navigasi bab">
+  <div class="rail__brand">
+    <div class="rail__ar">سيرة نبوية</div>
+    <div class="rail__title">Sirah Nabawiyah</div>
+    <div class="rail__sub">Ar-Rahiq al-Makhtum</div>
+  </div>
+  <div class="rail__nav" id="railNav">
+    <a class="rail__link" href="#beranda"><span class="rail__num">—</span> Beranda</a>
+    <a class="rail__link" href="#nasab"><span class="rail__num">I</span> Nasab Rasulullah</a>
+    <a class="rail__link" href="#bani-hasyim"><span class="rail__num">II</span> Keluarga Bani Hasyim</a>
+    <a class="rail__link" href="#ayah-ibu"><span class="rail__num">III</span> Ayah, Ibu, Kakek, Paman</a>
+    <a class="rail__link" href="#sebelum"><span class="rail__num">IV</span> Sebelum Kenabian</a>
+    <a class="rail__link" href="#kenabian"><span class="rail__num">V</span> Kenabian &amp; Dakwah Mekah</a>
+    <a class="rail__link" href="#hijrah"><span class="rail__num">VI</span> Hijrah ke Madinah</a>
+    <a class="rail__link" href="#perang"><span class="rail__num">VII</span> Seluruh Peperangan</a>
+    <a class="rail__link" href="#istri"><span class="rail__num">VIII</span> Istri-Istri Rasulullah</a>
+    <a class="rail__link" href="#anak"><span class="rail__num">IX</span> Putra-Putri Rasulullah</a>
+    <a class="rail__link" href="#sahabat"><span class="rail__num">X</span> Hubungan dengan Sahabat</a>
+    <a class="rail__link" href="#wafat"><span class="rail__num">XI</span> Wafat Rasulullah</a>
+  </div>
+  <div class="rail__foot">
+    Disusun dari kitab <em>Ar-Rahiq al-Makhtum</em> karya Syaikh Shafiyurrahman al-Mubarakfuri.
+  </div>
+</nav>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main class="main">
+
+  <!-- ---------- HERO ---------- -->
+  <section class="hero" id="beranda">
+    <svg class="hero__pat" aria-hidden="true" width="100%" height="100%">
+      <defs>
+        <pattern id="khatam" width="76" height="76" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+          <g fill="none" stroke="#C6A15B" stroke-width="1">
+            <rect x="14" y="14" width="48" height="48"/>
+            <rect x="14" y="14" width="48" height="48" transform="rotate(45 38 38)"/>
+            <circle cx="38" cy="38" r="7"/>
+          </g>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#khatam)"/>
+    </svg>
+    <div class="hero__inner">
+      <div class="hero__frame">
+        <span class="hero__eyebrow">Ar-Rahiq al-Makhtum · Syaikh Shafiyurrahman al-Mubarakfuri</span>
+        <div class="hero__ar">مُحَمَّد ﷺ</div>
+        <h1 class="hero__h1">Perjalanan hidup Rasulullah,<br>dari nasab hingga hari terakhir.</h1>
+        <p class="hero__lead">Sebelas bagian yang merangkum garis keturunan, keluarga Bani Hasyim, rumah tangga, dua puluh tiga tahun kenabian, hijrah, seluruh peperangan, pergaulan bersama para sahabat, dan wafatnya beliau — mengikuti susunan kitab sirah pemenang sayembara Rabithah Alam Islami.</p>
+        <div class="hero__stats">
+          <div class="stat"><div class="stat__n">571 M</div><div class="stat__l">Tahun Gajah · kelahiran</div></div>
+          <div class="stat"><div class="stat__n">40</div><div class="stat__l">Usia saat wahyu pertama</div></div>
+          <div class="stat"><div class="stat__n">23</div><div class="stat__l">Tahun masa kenabian</div></div>
+          <div class="stat"><div class="stat__n">11 H</div><div class="stat__l">Wafat · usia 63 tahun</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- PENCARIAN ---------- -->
+  <div class="finder">
+    <div class="finder__in">
+      <input type="search" id="q" placeholder="Cari nama, peristiwa, atau tahun — misalnya “Khandaq”, “Hamzah”, “6 H”" aria-label="Cari isi sirah">
+      <span class="finder__c" id="qc"></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- ============================================================
+         I — NASAB
+         ============================================================ -->
+    <section class="sec" id="nasab">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian I</span>
+        <h2 class="sec__h">Nasab Rasulullah ﷺ</h2>
+        <p class="sec__intro">Al-Mubarakfuri membagi nasab beliau menjadi tiga penggal. Penggal pertama — dari Muhammad sampai Adnan — disepakati seluruh ahli nasab. Penggal kedua, dari Adnan sampai Ismail, diperselisihkan. Penggal ketiga, dari Ibrahim sampai Adam, bersumber dari Ahli Kitab dan sengaja tidak dibahas penulis karena datanya tidak dapat dipastikan.</p>
+        <div class="rule"></div>
+      </div>
+
+      <div class="silsilah" data-search="nasab silsilah adnan quraisy kinanah">
+        <div class="silsilah__hd">
+          <div class="silsilah__t">Silsilah yang Disepakati</div>
+          <div class="silsilah__n">21 generasi · Muhammad → Adnan</div>
+        </div>
+        <ul class="chain" id="chain"></ul>
+      </div>
+
+      <div class="grid grid--2" style="margin-top:22px;">
+        <div class="card card--gold" data-search="adnan ismail penggal kedua diperselisihkan">
+          <div class="card__meta">Penggal kedua</div>
+          <div class="card__ttl">Adnan sampai Ismail</div>
+          <p class="card__b">Bagian ini diperselisihkan dan sulit dikompromikan. Sebagian ahli nasab memilih tidak membahasnya; yang membahas pun berbeda-beda tentang jumlah dan urutan nama — pendapatnya bisa mencapai puluhan versi. Namun semua sepakat bahwa Adnan adalah keturunan Nabi Ismail.</p>
+        </div>
+        <div class="card card--gold" data-search="ibrahim adam ahli kitab penggal ketiga">
+          <div class="card__meta">Penggal ketiga</div>
+          <div class="card__ttl">Ibrahim sampai Adam</div>
+          <p class="card__b">Sumbernya sebagian besar berasal dari Ahli Kitab, termasuk rincian umur tiap generasi. Al-Mubarakfuri menilai datanya tidak valid sehingga memilih tidak menguraikannya.</p>
+        </div>
+      </div>
+
+      <div class="note" data-search="quraisy fihr kabilah">
+        Beberapa nama dalam silsilah punya dua penyebutan: <strong>Abdul Muthalib</strong> bernama asli Syaibah, <strong>Hasyim</strong> bernama asli Amr, <strong>Abdu Manaf</strong> bernama asli al-Mughirah, <strong>Qushay</strong> bernama asli Zaid, <strong>Nadhar</strong> bernama asli Qais, dan <strong>Mudrikah</strong> bernama asli Amir. Adapun <strong>Fihr</strong> adalah leluhur yang dijuluki Quraisy — dari sinilah nama kabilah itu berasal.
+        <div class="src" style="margin-top:8px;">Ar-Rahiq al-Makhtum, bab I bagian IV, hlm. 56–57</div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         II — BANI HASYIM
+         ============================================================ -->
+    <section class="sec" id="bani-hasyim">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian II</span>
+        <h2 class="sec__h">Keluarga Bani Hasyim</h2>
+        <p class="sec__intro">Keluarga Rasulullah lazim disebut keluarga Hasyimiyah, dinisbatkan kepada kakek beliau, Hasyim bin Abdu Manaf. Inilah rumpun yang memegang hak melayani jamaah haji di Mekah dan yang kelak menanggung pemboikotan demi melindungi beliau.</p>
+        <div class="rule"></div>
+      </div>
+
+      <div class="tree" data-search="pohon keluarga bani hasyim abdul muthalib anak">
+        <div class="tree__lvl">
+          <div class="tree__lbl">Generasi 1</div>
+          <div class="tree__row"><span class="pill pill--k">Hasyim (Amr) bin Abdu Manaf</span><span class="pill">menikah Salma binti Amr — Bani Adi bin Najjar, Yatsrib</span></div>
+        </div>
+        <div class="tree__lvl">
+          <div class="tree__lbl">Generasi 2</div>
+          <div class="tree__row"><span class="pill pill--k">Abdul Muthalib (Syaibah)</span><span class="pill">lahir ± 497 M · penggali kembali sumur Zamzam</span></div>
+        </div>
+        <div class="tree__lvl">
+          <div class="tree__lbl">Generasi 3 — sepuluh putra Abdul Muthalib</div>
+          <div class="tree__row">
+            <span class="pill pill--g">Abdullah <em>(ayah Nabi)</em></span>
+            <span class="pill pill--g">Abu Thalib</span>
+            <span class="pill pill--g">Hamzah</span>
+            <span class="pill pill--g">Abbas</span>
+            <span class="pill pill--r">Abu Lahab</span>
+            <span class="pill">Harits</span><span class="pill">Zubair</span><span class="pill">Ghaidaq</span>
+            <span class="pill">Muqawwim</span><span class="pill">Dhirar</span>
+          </div>
+        </div>
+        <div class="tree__lvl">
+          <div class="tree__lbl">Generasi 3 — enam putri Abdul Muthalib</div>
+          <div class="tree__row">
+            <span class="pill">Ummul Hakim (Baidha')</span><span class="pill">Barrah</span><span class="pill">Atikah</span>
+            <span class="pill pill--g">Shafiyah <em>(ibu Zubair bin Awwam)</em></span><span class="pill">Arwa</span><span class="pill">Umaimah</span>
+          </div>
+        </div>
+        <div class="tree__lvl" style="margin-bottom:0;">
+          <div class="tree__lbl">Generasi 4</div>
+          <div class="tree__row"><span class="pill pill--k">Muhammad ﷺ bin Abdullah</span></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Dua tokoh pembentuk keluarga</h3>
+
+      <details class="exp" data-search="hasyim tsarid rihlah dagang gaza siqayah rifadah">
+        <summary><span class="exp__yr">± 464–497 M</span> Hasyim bin Abdu Manaf</summary>
+        <div class="exp__body">
+          <ul>
+            <li>Memegang hak <strong>siqayah</strong> (menyediakan air) dan <strong>rifadah</strong> (menjamu makan) bagi jamaah haji, hasil pembagian wewenang antara Bani Abdu Manaf dan Bani Abdud Dar.</li>
+            <li>Orang pertama yang menyediakan <em>tsarid</em> — remah roti bercampur kuah — untuk jamaah haji Mekah. Dari kebiasaan menumbuk roti inilah julukan "Hasyim" melekat, sedangkan nama aslinya Amr.</li>
+            <li>Merintis <strong>dua rute ekspedisi dagang tahunan</strong> Quraisy: kafilah musim dingin dan musim panas — pola niaga yang kelak menjadi tulang punggung ekonomi Mekah.</li>
+            <li>Dalam perjalanan dagang ke Syam ia singgah di Madinah dan menikahi <strong>Salma binti Amr</strong> dari Bani Adi bin Najjar. Ia wafat di Gaza, Palestina, saat istrinya sedang mengandung.</li>
+            <li>Bayi itu lahir sekitar 497 M dan dinamai <strong>Syaibah</strong> karena ada uban di rambutnya. Ia diasuh ibunya di Yatsrib tanpa diketahui keluarga Bani Hasyim di Mekah.</li>
+          </ul>
+          <div class="src">Ar-Rahiq al-Makhtum, hlm. 57</div>
+        </div>
+      </details>
+
+      <details class="exp" data-search="abdul muthalib zamzam nazar pasukan gajah abrahah">
+        <summary><span class="exp__yr">± 497–578 M</span> Abdul Muthalib bin Hasyim</summary>
+        <div class="exp__body">
+          <ul>
+            <li>Dibawa pulang ke Mekah oleh pamannya, al-Muthalib. Orang-orang mengira ia budak sang paman, sehingga dipanggil "Abdul Muthalib" — nama yang akhirnya melekat seumur hidup.</li>
+            <li>Menerima isyarat lewat mimpi lalu <strong>menggali kembali sumur Zamzam</strong> yang telah lama terkubur, dan mendapati harta yang dipendam kabilah Jurhum di dalamnya.</li>
+            <li>Bernazar akan mengurbankan salah satu anaknya bila dikaruniai sepuluh putra. Ketika nazar itu jatuh pada Abdullah — putra yang paling dicintainya — undian akhirnya berpindah kepada <strong>100 ekor unta</strong>.</li>
+            <li>Menjadi pemuka Quraisy saat <strong>Abrahah</strong> datang menyerbu Ka'bah dengan pasukan bergajah (571 M). Peristiwa kehancuran pasukan itu memuliakan Baitullah di mata dunia — Romawi maupun Persia — tepat menjelang kelahiran Rasulullah.</li>
+            <li>Wafat ketika Nabi berusia delapan tahun, setelah mengasuh beliau selama dua tahun.</li>
+          </ul>
+          <div class="src">Ar-Rahiq al-Makhtum, hlm. 58–61</div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ============================================================
+         III — AYAH IBU KAKEK PAMAN
+         ============================================================ -->
+    <section class="sec" id="ayah-ibu">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian III</span>
+        <h2 class="sec__h">Ayah, Ibu, Kakek &amp; Paman</h2>
+        <p class="sec__intro">Rasulullah tumbuh sebagai yatim sejak dalam kandungan, lalu yatim piatu pada usia enam tahun. Empat pengasuh berganti dalam delapan tahun pertama hidupnya — dan seorang paman menemaninya lebih dari empat dekade.</p>
+        <div class="rule"></div>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card card--gold" data-search="abdullah ayah nabi wafat yatsrib aminah">
+          <div class="card__meta">Ayah</div>
+          <div class="card__ttl">Abdullah bin Abdul Muthalib</div>
+          <p class="card__b">Putra Abdul Muthalib yang paling rupawan, saleh, dan paling dicintai ayahnya. Dialah yang nyaris disembelih untuk menunaikan nazar sang ayah, lalu ditebus dengan seratus ekor unta.</p>
+          <p class="card__b">Menikah dengan Aminah binti Wahb. Dalam perjalanan dagang ke Syam ia jatuh sakit dan wafat di Yatsrib pada usia sekitar 25 tahun — beberapa bulan sebelum putranya lahir. Warisan yang ditinggalkannya sangat sederhana: lima ekor unta, sekawanan kambing, dan seorang budak perempuan bernama Ummu Aiman.</p>
+          <span class="card__tag">Wafat sebelum Nabi lahir</span>
+        </div>
+
+        <div class="card card--gold" data-search="aminah binti wahb ibu nabi abwa">
+          <div class="card__meta">Ibu</div>
+          <div class="card__ttl">Aminah binti Wahb</div>
+          <p class="card__b">Berasal dari Bani Zuhrah, putri Wahb bin Abdu Manaf — pemuka kabilahnya dari sisi nasab maupun kedudukan.</p>
+          <p class="card__b">Ketika Nabi berusia enam tahun, ia mengajak putranya berziarah ke Yatsrib menemui kerabat Bani Adi bin Najjar dan menengok makam suaminya. Dalam perjalanan pulang ia wafat di <strong>al-Abwa'</strong>, sebuah tempat antara Mekah dan Madinah. Ummu Aiman-lah yang kemudian membawa anak itu kembali ke Mekah.</p>
+          <span class="card__tag">Nabi berusia 6 tahun</span>
+        </div>
+
+        <div class="card card--gold" data-search="abdul muthalib kakek pengasuh">
+          <div class="card__meta">Kakek</div>
+          <div class="card__ttl">Abdul Muthalib</div>
+          <p class="card__b">Mengambil alih pengasuhan sepeninggal Aminah dan menyayangi cucunya melebihi anak-anaknya sendiri — beliau diberi tempat duduk di samping Ka'bah yang biasanya tidak boleh ditempati siapa pun.</p>
+          <p class="card__b">Ia wafat dua tahun kemudian, saat Nabi berusia delapan tahun, dan berwasiat agar Abu Thalib meneruskan pengasuhan.</p>
+          <span class="card__tag">Mengasuh 2 tahun</span>
+        </div>
+
+        <div class="card card--gold" data-search="abu thalib paman pelindung tahun duka cita">
+          <div class="card__meta">Paman — pelindung</div>
+          <div class="card__ttl">Abu Thalib</div>
+          <p class="card__b">Saudara kandung Abdullah, sehingga hubungannya paling dekat. Ia mengasuh, membawa serta dalam perjalanan dagang ke Syam, dan melindungi keponakannya lebih dari empat puluh tahun.</p>
+          <p class="card__b">Ketika Quraisy menekan agar dakwah dihentikan, ia tetap berdiri di pihak Nabi dan ikut menanggung pemboikotan di Syi'ib Abu Thalib. Ia wafat pada tahun kesepuluh kenabian — tahun yang dikenang sebagai <strong>Tahun Duka Cita</strong>, karena Khadijah pun wafat pada tahun yang sama.</p>
+          <span class="card__tag">Wafat tahun 10 kenabian</span>
+        </div>
+
+        <div class="card card--gold" data-search="hamzah singa allah uhud wahsyi paman">
+          <div class="card__meta">Paman — Singa Allah</div>
+          <div class="card__ttl">Hamzah bin Abdul Muthalib</div>
+          <p class="card__b">Paman sekaligus saudara sepersusuan Nabi, hanya beberapa tahun lebih tua. Keislamannya pada tahun keenam kenabian — dipicu kemarahan atas penghinaan Abu Jahal — menjadi tambahan kekuatan besar bagi kaum Muslimin.</p>
+          <p class="card__b">Membawa panji pada Perang Badar dan gugur sebagai syahid di Perang Uhud (3 H) oleh tombak Wahsyi. Nabi menggelarinya <em>Asadullah</em>, Singa Allah, dan <em>Sayyidus Syuhada</em>.</p>
+          <span class="card__tag">Syahid di Uhud</span>
+        </div>
+
+        <div class="card card--gold" data-search="abbas paman aqabah fathu makkah">
+          <div class="card__meta">Paman</div>
+          <div class="card__ttl">Abbas bin Abdul Muthalib</div>
+          <p class="card__b">Hadir dan menjadi penjamin dalam Bai'at Aqabah kedua, memastikan orang-orang Anshar benar-benar sanggup melindungi keponakannya. Ia menyembunyikan keislamannya cukup lama dan menampakkannya menjelang Pembebasan Mekah, lalu menjadi jembatan yang menyelamatkan Abu Sufyan dari hukuman.</p>
+          <span class="card__tag">Leluhur Bani Abbas</span>
+        </div>
+
+        <div class="card card--makkah" data-search="abu lahab paman penentang al-masad">
+          <div class="card__meta">Paman — penentang</div>
+          <div class="card__ttl">Abu Lahab</div>
+          <p class="card__b">Berdiri paling depan menolak dakwah sejak seruan terbuka di Bukit Shafa, bahkan mengerahkan istrinya, Ummu Jamil, untuk mengganggu Nabi. Namanya diabadikan sebagai peringatan dalam Surah al-Masad. Ia wafat tak lama setelah Perang Badar.</p>
+          <span class="card__tag">Penentang keras</span>
+        </div>
+
+        <div class="card" data-search="halimah sa'diyah tsuwaibah ummu aiman pengasuh susu">
+          <div class="card__meta">Para pengasuh</div>
+          <div class="card__ttl">Tsuwaibah, Halimah &amp; Ummu Aiman</div>
+          <p class="card__b"><strong>Tsuwaibah</strong>, budak Abu Lahab, menyusui beliau beberapa hari pertama. <strong>Halimah as-Sa'diyah</strong> dari Bani Sa'ad membawanya ke pedalaman dan mengasuhnya sekitar empat tahun — masa yang menumbuhkan fisik kuat dan bahasa Arab paling fasih.</p>
+          <p class="card__b"><strong>Ummu Aiman</strong> (Barakah), warisan dari sang ayah, mendampingi sejak masa kecil hingga masa Islam; Nabi menyebutnya sisa keluarga yang tersisa baginya.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         IV — SEBELUM KENABIAN
+         ============================================================ -->
+    <section class="sec" id="sebelum">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian IV</span>
+        <h2 class="sec__h">Kehidupan Sebelum Kenabian</h2>
+        <p class="sec__intro">Empat puluh tahun sebelum wahyu turun, tersusun sebuah biografi yang di kemudian hari menjadi bukti paling kuat bagi kenabiannya: masyarakat Mekah sudah memanggilnya <em>al-Amin</em> jauh sebelum ia mengaku sebagai utusan.</p>
+        <div class="rule"></div>
+      </div>
+
+      <ul class="tl" id="tlSebelum"></ul>
+
+      <div class="note" data-search="profil sebelum kenabian al-amin akhlak">
+        Al-Mubarakfuri menutup babak ini dengan potret pribadi Muhammad sebelum kenabian: cerdas, penuh perhitungan, santun bertutur, menjauhi minuman keras dan berhala, dan begitu dipercaya sehingga masyarakat menitipkan barang berharga kepadanya. Gelar <strong>al-Amin</strong> — orang yang tepercaya — bukan pemberian pengikut, melainkan pengakuan dari masyarakat yang kelak justru memusuhinya.
+        <div class="src" style="margin-top:8px;">Ar-Rahiq al-Makhtum, bab II, hlm. 65–77</div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         V — KENABIAN & DAKWAH MEKAH
+         ============================================================ -->
+    <section class="sec" id="kenabian">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian V</span>
+        <h2 class="sec__h">Kenabian &amp; Dakwah Fase Mekah</h2>
+        <p class="sec__intro">Tiga belas tahun di Mekah dibagi al-Mubarakfuri menjadi tiga tahap: dakwah sembunyi-sembunyi selama tiga tahun, dakwah terang-terangan yang berhadapan langsung dengan kekuasaan Quraisy, dan dakwah ke luar Mekah setelah pintu di kota itu nyaris tertutup.</p>
+        <div class="rule"></div>
+      </div>
+
+      <details class="exp" open data-search="gua hira wahyu pertama iqra jibril fatratul wahyu">
+        <summary><span class="exp__yr">Usia 40</span> Wahyu pertama di Gua Hira</summary>
+        <div class="exp__body">
+          <p>Menjelang usia empat puluh, beliau gemar menyendiri di Gua Hira, terutama sepanjang Ramadhan. Di sanalah Jibril datang membawa lima ayat pertama Surah al-'Alaq. Beliau pulang dalam keadaan menggigil, ditenangkan Khadijah, lalu dibawa menemui Waraqah bin Naufal yang mengenali tanda-tanda kenabian dari kitab terdahulu.</p>
+          <p>Setelah itu wahyu terputus beberapa waktu (<em>fatratul wahyu</em>), sebelum Jibril kembali dengan Surah al-Muddatstsir — perintah untuk bangkit dan memberi peringatan. Sejak titik ini kenabian berubah menjadi kerasulan.</p>
+        </div>
+      </details>
+
+      <details class="exp" data-search="tahap pertama sembunyi assabiqunal awwalun abu bakar khadijah ali zaid">
+        <summary><span class="exp__yr">Tahap I</span> Tiga tahun dakwah sembunyi-sembunyi</summary>
+        <div class="exp__body">
+          <p>Seruan diarahkan kepada orang-orang terdekat yang diyakini akan menerima kebenaran. Merekalah <em>as-Sabiqun al-Awwalun</em>:</p>
+          <ul>
+            <li><strong>Khadijah binti Khuwailid</strong> — perempuan pertama yang beriman;</li>
+            <li><strong>Ali bin Abu Thalib</strong> — anak-anak pertama yang beriman, saat itu berusia sekitar sepuluh tahun;</li>
+            <li><strong>Zaid bin Haritsah</strong> — dari kalangan bekas budak;</li>
+            <li><strong>Abu Bakar ash-Shiddiq</strong> — dari kalangan laki-laki dewasa, yang segera mengajak lingkarannya sendiri.</li>
+          </ul>
+          <p>Lewat Abu Bakar masuklah Utsman bin Affan, Zubair bin Awwam, Abdurrahman bin Auf, Sa'ad bin Abi Waqqash, dan Thalhah bin Ubaidillah. Shalat dikerjakan diam-diam di lorong-lorong dan lembah sepi.</p>
+        </div>
+      </details>
+
+      <details class="exp" data-search="tahap kedua terang-terangan shafa penyiksaan bilal yasir darul arqam habasyah">
+        <summary><span class="exp__yr">Tahap II</span> Dakwah terang-terangan &amp; masa penyiksaan</summary>
+        <div class="exp__body">
+          <p>Turunnya perintah memperingatkan kerabat terdekat membuka babak terbuka. Beliau naik ke <strong>Bukit Shafa</strong> dan menyeru seluruh kabilah Quraisy — seruan yang dijawab Abu Lahab dengan penghinaan.</p>
+          <p>Perlawanan Quraisy naik bertingkat: ejekan dan tuduhan penyihir, tawaran negosiasi harta dan kekuasaan, sampai penyiksaan fisik terhadap kaum lemah.</p>
+          <ul>
+            <li><strong>Keluarga Yasir</strong> disiksa di padang panas; Sumayyah gugur sebagai syahidah pertama dalam Islam.</li>
+            <li><strong>Bilal bin Rabah</strong> ditindih batu di bawah terik matahari, lalu dibebaskan Abu Bakar.</li>
+            <li><strong>Darul Arqam</strong> di kaki Bukit Shafa menjadi markas pembinaan sekaligus tempat aman.</li>
+            <li><strong>Hijrah ke Habasyah</strong> dua gelombang: rombongan pertama belasan orang, rombongan kedua jauh lebih besar. Quraisy mengirim utusan untuk memulangkan mereka, tetapi Najasyi menolak menyerahkan.</li>
+          </ul>
+          <p>Titik balik datang saat <strong>Hamzah</strong> dan kemudian <strong>Umar bin Khaththab</strong> memeluk Islam pada tahun keenam kenabian — sejak itu kaum Muslimin berani shalat terang-terangan di sekitar Ka'bah.</p>
+        </div>
+      </details>
+
+      <details class="exp" data-search="pemboikotan syi'ib abu thalib tahun duka cita piagam">
+        <summary><span class="exp__yr">7–10 kenabian</span> Pemboikotan &amp; Tahun Duka Cita</summary>
+        <div class="exp__body">
+          <p>Quraisy menyusun piagam boikot total terhadap Bani Hasyim dan Bani Muthalib: tidak ada jual beli, tidak ada pernikahan, tidak ada pergaulan. Piagam itu digantung di Ka'bah dan bertahan sekitar tiga tahun. Mereka bertahan di Syi'ib Abu Thalib sampai memakan dedaunan, sebelum piagam itu akhirnya dibatalkan oleh sekelompok Quraisy yang tak tega.</p>
+          <p>Tak lama sesudahnya, dalam tahun yang sama, wafat <strong>Abu Thalib</strong> — pelindung politiknya — dan <strong>Khadijah</strong> — penopang batinnya. Tahun itu dikenang sebagai <em>Amul Huzn</em>, Tahun Duka Cita.</p>
+        </div>
+      </details>
+
+      <details class="exp" data-search="thaif addas doa penolakan kabilah">
+        <summary><span class="exp__yr">Tahap III</span> Thaif &amp; dakwah ke kabilah-kabilah</summary>
+        <div class="exp__body">
+          <p>Beliau berjalan kaki ke <strong>Thaif</strong> menemui para pemuka Tsaqif, namun ditolak dan diusir dengan lemparan batu hingga terluka. Di kebun anggur tempat beliau berteduh, seorang budak Nasrani bernama Addas justru memeluk Islam. Doa beliau di Thaif menjadi salah satu munajat paling masyhur dalam sirah.</p>
+          <p>Sesudah itu beliau menawarkan Islam kepada kabilah-kabilah Arab yang datang pada musim haji — sebuah strategi yang akhirnya berbuah pada rombongan Yatsrib.</p>
+        </div>
+      </details>
+
+      <details class="exp" data-search="isra mi'raj shalat lima waktu masjidil aqsha">
+        <summary><span class="exp__yr">± 1 tahun sebelum hijrah</span> Isra' &amp; Mi'raj</summary>
+        <div class="exp__body">
+          <p>Perjalanan malam dari Masjidil Haram ke Masjidil Aqsha, dilanjutkan naik ke langit. Dari peristiwa inilah datang <strong>perintah shalat lima waktu</strong>. Kabar ini memisahkan dua sikap dengan tajam: kaum musyrik menjadikannya bahan ejekan, sementara Abu Bakar membenarkannya tanpa ragu — dari sinilah gelar <em>ash-Shiddiq</em> melekat padanya.</p>
+        </div>
+      </details>
+
+      <details class="exp" data-search="bai'at aqabah pertama kedua naqib mush'ab bin umair">
+        <summary><span class="exp__yr">12–13 kenabian</span> Bai'at Aqabah I &amp; II</summary>
+        <div class="exp__body">
+          <ul>
+            <li><strong>Aqabah I</strong> — dua belas orang Yatsrib berbai'at untuk tidak menyekutukan Allah, tidak mencuri, tidak berzina, dan menaati Nabi dalam kebaikan. Beliau mengutus <strong>Mush'ab bin Umair</strong> sebagai duta Islam pertama ke Yatsrib.</li>
+            <li><strong>Aqabah II</strong> — lebih dari tujuh puluh orang laki-laki dan dua perempuan berbai'at untuk melindungi Nabi sebagaimana mereka melindungi keluarga sendiri. Dipilihlah <strong>dua belas naqib</strong> sebagai penanggung jawab kaum mereka.</li>
+          </ul>
+          <p>Bai'at kedua inilah yang mengubah dakwah dari sekadar bertahan menjadi memiliki basis wilayah — dan membuka jalan hijrah.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ============================================================
+         VI — HIJRAH
+         ============================================================ -->
+    <section class="sec" id="hijrah">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian VI</span>
+        <h2 class="sec__h">Hijrah ke Madinah</h2>
+        <p class="sec__intro">Bukan pelarian, melainkan perpindahan basis yang direncanakan matang: rombongan diberangkatkan lebih dulu, rute dipilih berlawanan arah, penunjuk jalan disewa dari luar lingkaran Muslim, dan logistik ditangani satu keluarga. Peristiwa ini kelak dijadikan Umar bin Khaththab sebagai titik nol penanggalan Islam.</p>
+        <div class="rule"></div>
+      </div>
+
+      <ul class="tl" id="tlHijrah"></ul>
+    </section>
+
+    <!-- ============================================================
+         VII — PEPERANGAN
+         ============================================================ -->
+    <section class="sec" id="perang">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian VII</span>
+        <h2 class="sec__h">Seluruh Peperangan</h2>
+        <p class="sec__intro">Sepanjang sepuluh tahun di Madinah tercatat sekitar dua puluh tujuh <em>ghazwah</em> — ekspedisi yang diikuti langsung oleh Rasulullah — dan puluhan <em>sariyyah</em>, satuan pasukan yang beliau kirim tanpa ikut serta. Hanya sebagian kecil yang benar-benar berujung pertempuran; jumlah pastinya berbeda-beda antar sejarawan. Berikut yang terpenting, berurut tahun Hijriah.</p>
+        <div class="rule"></div>
+      </div>
+
+      <div class="chips" id="warChips"></div>
+      <div id="warList"></div>
+      <div class="empty hidden" id="warEmpty">Tidak ada peperangan yang cocok dengan penyaringan ini.</div>
+
+      <div class="note" data-search="kesimpulan strategi perang rasulullah panglima">
+        Al-Mubarakfuri menutup pembahasan ini dengan satu kesimpulan: dilihat dari strategi dan dampaknya, Rasulullah adalah panglima terbesar sepanjang sejarah. Beliau selalu menempatkan diri pada posisi yang menuntut keteguhan dan keberanian, dan tidak pernah kalah karena kekeliruan siasat — mobilisasi, penentuan markas, maupun pemilihan waktu serangan. Kerugian di Uhud dan kekacauan awal di Hunain, tulisnya, bersumber dari kelemahan sebagian personel dan pelanggaran perintah, bukan dari rancangan perangnya.
+        <div class="src" style="margin-top:8px;">Ar-Rahiq al-Makhtum, bab VII bagian V, hlm. 509</div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VIII — ISTRI
+         ============================================================ -->
+    <section class="sec" id="istri">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian VIII</span>
+        <h2 class="sec__h">Istri-Istri Rasulullah ﷺ</h2>
+        <p class="sec__intro">Al-Mubarakfuri menyebut sebelas perempuan mulia yang membangun rumah tangga bersama Rasulullah. Total perempuan yang pernah beliau nikahi tercatat tiga belas orang: dua wafat semasa hidup beliau — Khadijah dan Zainab binti Khuzaimah — sembilan hidup sesudah beliau, dan dua tidak pernah beliau gauli. Selama Khadijah hidup, beliau tidak menikah dengan perempuan lain.</p>
+        <div class="rule"></div>
+      </div>
+
+      <div class="grid grid--2" id="wives"></div>
+
+      <div class="note" data-search="hukum poligami nabi tujuan pernikahan">
+        Hukum yang berlaku bagi Rasulullah dalam hal menikahi lebih dari empat istri memang berbeda dengan umatnya, dan tiap pernikahan itu memiliki tujuannya sendiri — menegakkan hukum baru, mengikat aliansi kabilah, memuliakan janda para syuhada, atau membebaskan tawanan lalu mengangkat derajatnya.
+        <div class="src" style="margin-top:8px;">Ar-Rahiq al-Makhtum, bab IX bagian I, hlm. 551–553</div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         IX — ANAK
+         ============================================================ -->
+    <section class="sec" id="anak">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian IX</span>
+        <h2 class="sec__h">Putra-Putri Rasulullah ﷺ</h2>
+        <p class="sec__intro">Seluruh putra-putri beliau lahir dari Khadijah, kecuali Ibrahim. Semua putra beliau wafat pada masa kecil. Putri-putrinya sempat mengalami masa Islam, memeluknya, dan ikut berhijrah ke Madinah — namun semuanya wafat saat beliau masih hidup, kecuali Fathimah.</p>
+        <div class="rule"></div>
+      </div>
+
+      <div class="grid grid--2" id="kids"></div>
+
+      <div class="note">
+        <span class="src">Ar-Rahiq al-Makhtum, hlm. 73</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         X — SAHABAT
+         ============================================================ -->
+    <section class="sec" id="sahabat">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian X</span>
+        <h2 class="sec__h">Hubungan dengan Para Sahabat</h2>
+        <p class="sec__intro">Yang membedakan kepemimpinan beliau bukan jarak, melainkan kedekatan. Empat pola berulang sepanjang sirah: mempersaudarakan, bermusyawarah, menyapa dengan panggilan yang menyenangkan, dan menegakkan keadilan tanpa memandang kedudukan.</p>
+        <div class="rule"></div>
+      </div>
+
+      <h4 class="sub">Empat pola hubungan</h4>
+      <div class="grid grid--2">
+        <div class="card card--madinah" data-search="mempersaudarakan muhajirin anshar ukhuwah">
+          <div class="card__ttl">Mempersaudarakan</div>
+          <p class="card__b">Sesampai di Madinah, beliau mempersaudarakan Muhajirin dengan Anshar — sekitar sembilan puluh orang — sampai pada taraf saling mewarisi di masa awal. Kaum Anshar membagi rumah, tanah, dan usaha; Muhajirin memilih ditunjukkan jalan ke pasar ketimbang diberi harta.</p>
+        </div>
+        <div class="card card--madinah" data-search="musyawarah badar uhud khandaq hubab salman">
+          <div class="card__ttl">Bermusyawarah</div>
+          <p class="card__b">Di Badar beliau menerima usul Hubab bin Mundzir tentang penentuan posisi sumber air. Di Uhud beliau mengikuti pendapat mayoritas untuk keluar kota meski pendapat pribadinya berbeda. Di Khandaq beliau mengambil gagasan Salman al-Farisi menggali parit — sebuah taktik yang belum dikenal bangsa Arab.</p>
+        </div>
+        <div class="card card--madinah" data-search="kelembutan kunyah anas bin malik pelayan">
+          <div class="card__ttl">Kelembutan sehari-hari</div>
+          <p class="card__b">Anas bin Malik melayani beliau sepuluh tahun dan mengaku tak pernah sekali pun dibentak atau ditanya mengapa mengerjakan atau meninggalkan sesuatu. Beliau memanggil sahabat dengan kunyah dan julukan yang mereka sukai, menjenguk yang sakit, dan mengantar jenazah.</p>
+        </div>
+        <div class="card card--madinah" data-search="keadilan tanpa pandang bulu hukum">
+          <div class="card__ttl">Keadilan tanpa pengecualian</div>
+          <p class="card__b">Ketika para pemuka meminta keringanan hukum bagi seorang perempuan terpandang yang mencuri, beliau menegaskan bahwa umat terdahulu binasa justru karena hukum hanya ditegakkan atas orang lemah — dan menyatakan tidak akan ada pengecualian bahkan bagi keluarganya sendiri.</p>
+        </div>
+      </div>
+
+      <h4 class="sub">Sahabat-sahabat terdekat</h4>
+      <div class="grid grid--3" id="companions"></div>
+    </section>
+
+    <!-- ============================================================
+         XI — WAFAT
+         ============================================================ -->
+    <section class="sec" id="wafat">
+      <div class="sec__head">
+        <span class="sec__kicker">Bagian XI</span>
+        <h2 class="sec__h">Wafat Rasulullah ﷺ</h2>
+        <p class="sec__intro">Haji Wada' pada tahun 10 H sudah membawa nada perpisahan. Sekitar tiga bulan kemudian, sakit beliau dimulai pada akhir bulan Shafar 11 H dan berlangsung kurang lebih sebelas hari — hari-hari yang direkam sirah nyaris jam demi jam.</p>
+        <div class="rule"></div>
+      </div>
+
+      <ul class="tl" id="tlWafat"></ul>
+
+      <div class="grid grid--2" style="margin-top:26px;">
+        <div class="card card--gold" data-search="umar abu bakar khutbah ali imran 144">
+          <div class="card__ttl">Dua sikap di hari itu</div>
+          <p class="card__b"><strong>Umar bin Khaththab</strong> tak sanggup menerima kabar itu dan berdiri mengancam siapa pun yang mengatakan Rasulullah telah wafat.</p>
+          <p class="card__b"><strong>Abu Bakar</strong> masuk, membuka wajah beliau, menciumnya, lalu keluar menenangkan orang banyak dengan kalimat yang menjadi penanda kematangan umat ini: siapa yang menyembah Muhammad, sungguh Muhammad telah wafat; siapa yang menyembah Allah, sungguh Allah Mahahidup dan tidak akan mati. Ia lalu membacakan ayat 144 Surah Ali Imran — dan orang-orang seolah baru pertama kali mendengarnya.</p>
+        </div>
+        <div class="card card--gold" data-search="pemakaman liang lahad aisyah kamar abu thalhah">
+          <div class="card__ttl">Pemandian &amp; pemakaman</div>
+          <p class="card__b">Beliau dimandikan tanpa dilepas pakaiannya, ditangani keluarga terdekat: Abbas, Ali, Fadhl, Qutsam, Usamah bin Zaid, dan Syuqran, dikafani tiga lapis kain putih Yaman.</p>
+          <p class="card__b">Kaum Muslimin menyalatkan secara bergantian tanpa imam — rombongan demi rombongan, laki-laki, lalu perempuan, lalu anak-anak. Beliau dimakamkan di kamar Aisyah, tepat di tempat beliau wafat, dengan liang lahad yang digali Abu Thalhah.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /wrap -->
+
+  <footer class="foot">
+    <div class="foot__in">
+      <div class="foot__t">Tentang sumber</div>
+      <p>Seluruh isi aplikasi ini disusun ulang dengan bahasa sendiri dari kitab <em>Ar-Rahiq al-Makhtum: Sirah Nabawiyah</em> karya Syaikh Shafiyurrahman al-Mubarakfuri — karya pemenang sayembara penulisan sirah Rabithah Alam Islami. Nomor halaman yang dicantumkan mengacu pada edisi terjemahan Indonesia yang digunakan.</p>
+      <p>Untuk pendalaman, riwayat lengkap beserta sanad dan catatan kaki rujukannya (Ibnu Hisyam, Tarikh ath-Thabari, Shahih Bukhari, Zadul Ma'ad, dan lainnya) dapat dibaca langsung pada kitab aslinya.</p>
+      <div class="foot__meta">Ringkasan edukatif · bukan pengganti kitab aslinya · rujuk ulama untuk kesimpulan hukum</div>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
