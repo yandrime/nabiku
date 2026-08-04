@@ -1,8 +1,6 @@
-/**
- * Data Keluarga Rasulullah ﷺ (Istri-Istri & Putra-Putri)
- */
+import { CardItem } from '../types';
 
-export const WIVES = [
+export const WIVES: CardItem[] = [
   {
     n: "Khadijah binti Khuwailid", meta: "Istri pertama · Mekah, sebelum kenabian", ph: "makkah",
     b: [
@@ -38,7 +36,7 @@ export const WIVES = [
   {
     n: "Zainab binti Khuzaimah", meta: "4 H · Ummul Masakin", ph: "madinah",
     b: [
-      "Berasal dari Bani Hilal bin Amir. Dijuluki <em>Ummul Masakin</em> — ibu orang-orang miskin — karena kasih sayang dan kemurahan hatinya kepada mereka.",
+      "Berasal dari Bani Hilal bin Amir. Dijuluki Ummul Masakin — ibu orang-orang miskin — karena kasih sayang dan kemurahan hatinya kepada mereka.",
       "Sebelumnya istri Abdullah bin Jahsy yang gugur di Perang Uhud.",
       "Hanya dua atau tiga bulan mendampingi Rasulullah sebelum wafat pada Rabi'ul Akhir 4 H. Nabi sendiri yang menyalati dan memakamkannya di Baqi'."
     ]
@@ -93,7 +91,7 @@ export const WIVES = [
   }
 ];
 
-export const KIDS = [
+export const KIDS: CardItem[] = [
   { n: "Qasim", meta: "Putra · dari Khadijah", b: ["Anak pertama, dan dari namanyalah kunyah Rasulullah diambil: <em>Abul Qasim</em>. Wafat pada masa kanak-kanak."] },
   { n: "Zainab", meta: "Putri · dari Khadijah", b: ["Menikah dengan Abul Ash bin Rabi'. Kisah perjalanan hijrahnya ke Madinah dan kembalinya sang suami kepada Islam menjadi salah satu bagian paling menyentuh dalam sirah."] },
   { n: "Ruqayyah", meta: "Putri · dari Khadijah", b: ["Menikah dengan Utsman bin Affan dan berhijrah bersamanya ke Habasyah lalu ke Madinah. Wafat saat Perang Badar sedang berlangsung, sehingga Utsman tidak ikut serta dan tetap dicatat mendapat bagian pahala Badar."] },

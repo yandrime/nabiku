@@ -1,8 +1,6 @@
-/**
- * Data Linimasa (Sebelum Kenabian, Hijrah, dan Wafat)
- */
+import { TimelineItem } from '../types';
 
-export const TL_SEBELUM = [
+export const TL_SEBELUM: TimelineItem[] = [
   { y: "571 M", t: "Kelahiran di Mekah", d: "Hari Senin, bulan Rabi'ul Awwal, pada tahun terjadinya peristiwa pasukan bergajah. Lahir dalam keadaan yatim; kakeknya menamainya Muhammad — nama yang saat itu belum lazim di kalangan Arab.", gold: true },
   { y: "0–4 th", t: "Di tengah Bani Sa'ad", d: "Setelah disusui Tsuwaibah beberapa hari, beliau diasuh Halimah as-Sa'diyah di pedalaman. Keberkahan yang dirasakan keluarga Halimah membuat mereka menahannya lebih lama dari kebiasaan." },
   { y: "± 4 th", t: "Peristiwa pembelahan dada", d: "Dua malaikat mendatangi beliau saat bermain, membelah dada, dan membersihkan hatinya. Kejadian ini membuat Halimah mengembalikannya kepada sang ibu." },
@@ -17,7 +15,7 @@ export const TL_SEBELUM = [
   { y: "± 38–40 th", t: "Menyendiri di Gua Hira", d: "Menjelang usia empat puluh, kecenderungan menyendiri makin kuat, terutama sepanjang bulan Ramadhan — pengantar menuju datangnya wahyu." }
 ];
 
-export const TL_HIJRAH = [
+export const TL_HIJRAH: TimelineItem[] = [
   { y: "Awal", t: "Konspirasi Darun Nadwah", d: "Para pemuka Quraisy bersepakat mengambil satu pemuda dari setiap kabilah untuk membunuh Nabi secara bersama-sama, agar Bani Hasyim tak mampu menuntut balas kepada semua kabilah sekaligus.", gold: true },
   { y: "Malam", t: "Ali menempati ranjang Nabi", d: "Ali bin Abu Thalib tidur berselimut di tempat tidur beliau, sekaligus ditugasi mengembalikan barang-barang titipan orang Mekah yang masih dipegang Nabi." },
   { y: "Malam", t: "Keluar dari rumah yang terkepung", d: "Beliau keluar melewati para pengepung tanpa seorang pun menyadarinya, lalu menuju rumah Abu Bakar." },
@@ -31,7 +29,7 @@ export const TL_HIJRAH = [
   { y: "Sesudahnya", t: "Tiga fondasi masyarakat baru", d: "Membangun Masjid Nabawi sebagai pusat, mempersaudarakan Muhajirin dengan Anshar, dan menyusun perjanjian tertulis yang mengatur hubungan seluruh komponen Madinah termasuk kaum Yahudi." }
 ];
 
-export const TL_WAFAT = [
+export const TL_WAFAT: TimelineItem[] = [
   { y: "10 H", t: "Isyarat perpisahan di Haji Wada'", d: "Dalam khutbah di Arafah beliau meminta umat bersaksi bahwa risalah telah disampaikan, dan menyampaikan kalimat-kalimat yang oleh banyak sahabat dirasakan sebagai perpisahan.", gold: true },
   { y: "Shafar 11 H", t: "Permulaan sakit", d: "Sepulang berziarah ke Baqi' pada suatu malam, beliau mulai merasakan sakit kepala yang berat disertai demam tinggi. Sakit itu berlangsung kurang lebih sebelas hari." },
   { y: "Pekan terakhir", t: "Pindah ke rumah Aisyah", d: "Beliau meminta izin kepada para istrinya untuk dirawat di rumah Aisyah, dan mereka mengizinkan. Beliau berpindah dengan dipapah." },
@@ -39,7 +37,7 @@ export const TL_WAFAT = [
   { y: "3 hari sebelum", t: "Pesan-pesan terakhir", d: "Di antaranya wasiat agar tidak seorang pun meninggal kecuali dalam keadaan berbaik sangka kepada Allah, dan wasiat tentang shalat serta perlakuan terhadap para budak." },
   { y: "1–2 hari sebelum", t: "Keluar untuk shalat Zuhur", d: "Sakit beliau sempat meringan. Dipapah dua orang, beliau keluar dan duduk di samping kiri Abu Bakar yang sedang mengimami; Abu Bakar mengikuti shalat beliau dan mengeraskan takbir agar terdengar jamaah." },
   { y: "Sehari sebelum", t: "Memerdekakan dan bersedekah", d: "Beliau memerdekakan dua orang budak, menyedekahkan sisa dinar yang ada, dan menghibahkan senjata-senjata beliau kepada kaum Muslimin. Baju besinya saat itu masih tergadai pada seorang Yahudi dengan jaminan gandum." },
-  { y: "Senin pagi", t: "Menyingkap tirai kamar", d: "Saat kaum Muslimin bersiap shalat Subuh, beliau menyingkap tirai dan memandang mereka yang berbaris rapi, lalu tersenyum. Abu Bakar mengira beliau akan keluar dan hendak mundur — banyak sahabat mengira ini tanda kesembuhan.", gold: true },
-  { y: "Dhuha, Senin", t: "Ar-Rafiqul A'la", d: "Beliau wafat pada waktu dhuha hari Senin, 12 Rabi'ul Awwal 11 H, di pangkuan Aisyah, dalam usia enam puluh tiga tahun. Kalimat terakhir yang terdengar adalah permohonan untuk bersama <em>ar-Rafiqul A'la</em> — kekasih Yang Mahatinggi.", gold: true },
+  { y: "Senin pagi", t: "Menyingkap tirai kamar", d: "Saat kaum Muslimin bersiap shalat Subuh, beliau menyingkap tirai dan memandang mereka yang berbaris rapi, lalu tersenum. Abu Bakar mengira beliau akan keluar dan hendak mundur — banyak sahabat mengira ini tanda kesembuhan.", gold: true },
+  { y: "Dhuha, Senin", t: "Ar-Rafiqul A'la", d: "Beliau wafat pada waktu dhuha hari Senin, 12 Rabi'ul Awwal 11 H, di pangkuan Aisyah, dalam usia enam puluh tiga tahun. Kalimat terakhir yang terdengar adalah permohonan untuk bersama ar-Rafiqul A'la — kekasih Yang Mahatinggi.", gold: true },
   { y: "Selasa", t: "Dimakamkan di kamar Aisyah", d: "Sesuai isyarat bahwa nabi dimakamkan di tempat ia wafat, liang lahad digali oleh Abu Thalhah di kamar Aisyah. Pemakaman berlangsung pada malam Rabu." }
 ];

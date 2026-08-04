@@ -1,6 +1,8 @@
 # 📖 Sirah Nabawiyah App
 
-Aplikasi web interaktif perjalanan hidup Rasulullah ﷺ dari nasab, keluarga Bani Hasyim, kenabian, hijrah, seluruh peperangan, pergaulan sahabat, hingga wafatnya beliau — berdasarkan kitab *Ar-Rahiq al-Makhtum* karya Syaikh Shafiyurrahman al-Mubarakfuri.
+Aplikasi web interaktif perjalanan hidup Rasulullah ﷺ dari nasab, keluarga Bani Hasyim, kenabian, hijrah, seluruh peperangan, pergaulan sahabat, hingga wafatnya beliau — disadur dari berbagai sumber rujukan sirah nabawiyah yang shahih (termasuk *Ar-Rahiq al-Makhtum* karya Syaikh Shafiyurrahman al-Mubarakfuri).
+
+Dibuat menggunakan standar modern **Next.js App Router** dengan **React** & **TypeScript**.
 
 ---
 
@@ -8,33 +10,42 @@ Aplikasi web interaktif perjalanan hidup Rasulullah ﷺ dari nasab, keluarga Ban
 
 ```text
 sirah-nabawiyah-app/
-├── index.html              # Entry point HTML utama (Vercel Root)
-├── sirah-nabawiyah.html    # Entry point kompatibilitas (Redirect ke index.html)
-├── vercel.json             # Konfigurasi deployment & routing Vercel
-├── package.json            # Konfigurasi npm & Vite dev server
-├── css/
-│   ├── tokens.css          # Design tokens (skema warna manuskrip & font)
-│   ├── layout.css          # Structural layout (rail sidebar, topbar, grid)
-│   ├── components.css      # Styling komponen (linimasa, silsilah, kartu, perang)
-│   └── style.css           # Master CSS bundler
-└── js/
-    ├── data/               # Data historis terisolasi (mudah diperbarui)
-    │   ├── nasab.js        # Data silsilah 21 generasi
-    │   ├── timeline.js     # Data linimasa (Sebelum Kenabian, Hijrah, Wafat)
-    │   ├── wars.js         # Data peperangan & ghazwah
-    │   ├── family.js       # Data istri-istri & putra-putri
-    │   └── companions.js   # Data sahabat-sahabat terdekat
-    ├── render.js           # Fungsi rendering DOM komponen
-    ├── search.js           # Logika pencarian real-time & debouncing
-    ├── nav.js              # Navigasi sidebar, active link, & drawer mobile
-    └── app.js              # Entry point JavaScript utama (ES Module)
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx       # Root layout & Google fonts configuration
+│   │   ├── page.tsx         # Main page (Beranda & Sirah sections)
+│   │   ├── globals.css      # Design tokens, layout & component styles
+│   │   └── sumber/
+│   │       └── page.tsx     # Halaman Sumber & Rujukan
+│   ├── components/          # Komponen React Modular
+│   │   ├── SidebarRail.tsx  # Sidebar navigasi & drawer mobile
+│   │   ├── TopBar.tsx       # Header mobile
+│   │   ├── Hero.tsx         # Hero banner dengan motif geometric khatam SVG
+│   │   ├── NasabSection.tsx # Silsilah nasab (3 penggal accordion)
+│   │   ├── BaniHasyimSection.tsx # Pohon keluarga Bani Hasyim
+│   │   ├── TimelineSection.tsx # Linimasa (Sebelum Kenabian, Hijrah, Wafat)
+│   │   ├── WarsSection.tsx  # Daftar peperangan & filter tahun
+│   │   ├── FamilySection.tsx# Kartu Istri-istri & Putra-putri
+│   │   ├── CompanionsSection.tsx # Kartu Sahabat-sahabat
+│   │   └── Footer.tsx       # Footer aplikasi
+│   ├── data/                # Data terstruktur & type-safe
+│   │   ├── nasab.ts
+│   │   ├── timeline.ts
+│   │   ├── family.ts
+│   │   ├── wars.ts
+│   │   └── companions.ts
+│   └── types/
+│       └── index.ts         # TypeScript interface definitions
+├── next.config.js           # Konfigurasi Next.js
+├── tsconfig.json            # Konfigurasi TypeScript
+├── package.json             # Dependencies Next.js, React, TypeScript
+└── vercel.json              # Header keamanan Vercel
 ```
 
 ---
 
 ## 🚀 Cara Menjalankan Secara Lokal
 
-### Menggunakan Vite (Direkomendasikan)
 1. Install dependencies:
    ```bash
    npm install
@@ -43,22 +54,17 @@ sirah-nabawiyah-app/
    ```bash
    npm run dev
    ```
-3. Buka di browser: `http://localhost:5173`
-
-### Menjalankan Langsung Tanpa Node.js (Static)
-Aplikasi ini menggunakan standar **Vanilla HTML5 + ES Modules**, sehingga Anda dapat langsung membukanya menggunakan server statis lokal apa saja (seperti Extension Live Server di VS Code, `npx serve`, atau Python `python -m http.server`).
+3. Buka di browser: `http://localhost:3000`
 
 ---
 
 ## ☁️ Deployment ke Vercel
 
-Aplikasi ini sudah dilengkapi dengan berkas `vercel.json` dan `index.html` di root directory.
+Aplikasi ini menggunakan standar **Next.js App Router**.
 
 ### Langkah-langkah Deployment:
 1. Push repository ke GitHub / GitLab / Bitbucket.
 2. Buka dashboard [Vercel](https://vercel.com) dan klik **"Add New Project"**.
 3. Import repository `sirah-nabawiyah-app`.
-4. Pilih Framework Preset: **Other** (Static Site) atau **Vite**.
+4. Vercel akan otomatis mengenali preset **Next.js**.
 5. Klik **Deploy**!
-
-Vercel akan otomatis menyajikan aplikasi di URL publik dengan optimasi caching dan clean routes.

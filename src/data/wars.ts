@@ -1,7 +1,6 @@
-/**
- * Data Peperangan (Ghazwah & Sariyyah)
- */
-export const WARS = [
+import { WarItem } from '../types';
+
+export const WARS: WarItem[] = [
   {
     y: "1 H", ord: 1, nm: "Ekspedisi-ekspedisi pembuka", sub: "Saiful Bahr, Rabigh, Kharrar, Abwa', Buwath, Dzul Usyairah", ty: "campuran",
     p: [
@@ -52,7 +51,7 @@ export const WARS = [
     ]
   },
   {
-    y: "4 H", ord: 7, nm: "Tragedi Raji' &amp; Bi'r Ma'unah", sub: "Shafar · dua pengkhianatan", ty: "sariyyah",
+    y: "4 H", ord: 7, nm: "Tragedi Raji' & Bi'r Ma'unah", sub: "Shafar · dua pengkhianatan", ty: "sariyyah",
     p: [
       "Di <strong>Raji'</strong>, satuan dai yang diminta mengajarkan Islam justru dikhianati dan dibantai; Khubaib bin Adi dan Zaid bin Datsinah dijual ke Mekah lalu dieksekusi.",
       "Di <strong>Bi'r Ma'unah</strong>, sekitar tujuh puluh penghafal Al-Qur'an yang dikirim atas permintaan seorang tokoh kabilah dibunuh nyaris seluruhnya. Nabi berqunut selama sebulan penuh setelah peristiwa ini.",
@@ -67,7 +66,7 @@ export const WARS = [
     ]
   },
   {
-    y: "4 H", ord: 9, nm: "Badar Kedua, Dzatur Riqa' &amp; Dumatul Jandal", sub: "Sya'ban 4 H – Rabi'ul Awwal 5 H", ty: "ghazwah",
+    y: "4 H", ord: 9, nm: "Badar Kedua, Dzatur Riqa' & Dumatul Jandal", sub: "Sya'ban 4 H – Rabi'ul Awwal 5 H", ty: "ghazwah",
     p: [
       "<strong>Badar Kedua</strong>: memenuhi tantangan janji temu Abu Sufyan setelah Uhud. Kaum Muslimin datang, Quraisy tidak — kemenangan psikologis tanpa pertempuran.",
       "<strong>Dzatur Riqa'</strong>: menghadapi konsentrasi kabilah Ghathafan. Dari perjalanan inilah disyariatkan tata cara <em>shalat khauf</em>.",
@@ -138,7 +137,7 @@ export const WARS = [
     ]
   },
   {
-    y: "8 H", ord: 17, nm: "Perang Hunain", sub: "Syawal · 12.000 melawan Hawazin &amp; Tsaqif", ty: "ghazwah", big: true,
+    y: "8 H", ord: 17, nm: "Perang Hunain", sub: "Syawal · 12.000 melawan Hawazin & Tsaqif", ty: "ghazwah", big: true,
     p: [
       "Hawazin dan Tsaqif menyiapkan serangan mendadak di lembah sempit dengan menempatkan pemanah di ketinggian.",
       "Sebagian pasukan sempat terpukul mundur — sebagian riwayat mengaitkannya dengan rasa bangga atas jumlah yang besar. Al-Qur'an menyinggung persoalan ini secara langsung.",
@@ -158,7 +157,7 @@ export const WARS = [
     ]
   },
   {
-    y: "9–10 H", ord: 19, nm: "Tahun delegasi &amp; Haji Wada'", sub: "Amul Wufud · khutbah Arafah", ty: "campuran",
+    y: "9–10 H", ord: 19, nm: "Tahun delegasi & Haji Wada'", sub: "Amul Wufud · khutbah Arafah", ty: "campuran",
     p: [
       "Setelah Mekah dibebaskan, kabilah-kabilah datang berbondong-bondong menyatakan keislaman — dikenal sebagai <em>amul wufud</em>, tahun delegasi.",
       "Pada 10 H beliau memimpin <strong>Haji Wada'</strong> bersama jamaah yang sangat besar, dan menyampaikan khutbah di Arafah yang menegaskan kesucian darah dan harta, penghapusan riba dan dendam jahiliah, hak-hak perempuan, serta persaudaraan seluruh Muslim.",

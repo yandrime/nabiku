@@ -1,7 +1,6 @@
-/**
- * Data Sahabat-Sahabat Terdekat Rasulullah ﷺ
- */
-export const COMPANIONS = [
+import { CompanionItem } from '../types';
+
+export const COMPANIONS: CompanionItem[] = [
   { n: "Abu Bakar ash-Shiddiq", d: "Sahabat paling dekat, teman satu-satunya di Gua Tsur, mertua, dan orang yang ditunjuk mengimami shalat pada hari-hari terakhir beliau." },
   { n: "Umar bin Khaththab", d: "Masuk Islam pada tahun keenam kenabian dan mengubah keberanian kaum Muslimin di Mekah. Mertua Nabi lewat Hafshah." },
   { n: "Utsman bin Affan", d: "Menikahi dua putri Nabi secara berurutan sehingga digelari Dzun Nurain. Penyumbang terbesar pada persiapan Perang Tabuk." },
