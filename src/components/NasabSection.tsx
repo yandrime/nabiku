@@ -37,6 +37,11 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
 
   const sectionHasHits = !searchQuery || disepakatiMatches.length > 0 || diperselisihkanMatches.length > 0 || tanpaRujukanMatches.length > 0;
 
+  // Penomoran Generasi Berkelanjutan
+  const offsetI = 0;
+  const offsetII = NASAB_DISEPAKATI.length - 1; // 20
+  const offsetIII = offsetII + NASAB_DIPERSELISIHKAN.length - 1; // 57
+
   if (!sectionHasHits) return null;
 
   return (
@@ -65,7 +70,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                 <h3 className="acc-header__title">Silsilah yang Disepakati</h3>
               </div>
               <div className="acc-header__right">
-                <span>21 Generasi · Muhammad ﷺ → Adnan</span>
+                <span>21 Generasi · Gen. 1 → 21 (Muhammad ﷺ → Adnan)</span>
                 <svg
                   className="acc-header__icon"
                   viewBox="0 0 24 24"
@@ -88,6 +93,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                   if (!matchesSearch(x)) return null;
                   const nodeId = `disepakati-${i}`;
                   const isOpenNode = openNodes[nodeId];
+                  const genNum = offsetI + i + 1;
                   return (
                     <li key={nodeId} className={`node ${x.key ? 'is-key' : ''} ${isOpenNode ? 'is-open' : ''}`}>
                       <span className="node__dot" aria-hidden="true"></span>
@@ -98,7 +104,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                         aria-expanded={isOpenNode}
                         onClick={() => x.note && toggleNode(nodeId)}
                       >
-                        <span className="node__num">Generasi {i + 1}</span>
+                        <span className="node__num">Generasi {genNum}</span>
                         {i > 0 && <span style={{ opacity: 0.5, fontSize: '0.82em' }}>bin </span>}
                         {x.n}
                         {x.note && <span className="node__hint">(klik detail)</span>}
@@ -131,7 +137,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                 <h3 className="acc-header__title">Silsilah yang Diperselisihkan</h3>
               </div>
               <div className="acc-header__right">
-                <span>Adnan → Nabi Ismail a.s.</span>
+                <span>Gen. 21 → 58 (Adnan → Nabi Ismail a.s.)</span>
                 <svg
                   className="acc-header__icon"
                   viewBox="0 0 24 24"
@@ -154,6 +160,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                   if (!matchesSearch(x)) return null;
                   const nodeId = `diperselisihkan-${i}`;
                   const isOpenNode = openNodes[nodeId];
+                  const genNum = offsetII + i + 1;
                   return (
                     <li key={nodeId} className={`node ${x.key ? 'is-key' : ''} ${isOpenNode ? 'is-open' : ''}`}>
                       <span className="node__dot" aria-hidden="true"></span>
@@ -164,7 +171,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                         aria-expanded={isOpenNode}
                         onClick={() => x.note && toggleNode(nodeId)}
                       >
-                        <span className="node__num">Generasi {i + 1}</span>
+                        <span className="node__num">Generasi {genNum}</span>
                         {i > 0 && <span style={{ opacity: 0.5, fontSize: '0.82em' }}>bin </span>}
                         {x.n}
                         {x.note && <span className="node__hint">(klik detail)</span>}
@@ -197,7 +204,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                 <h3 className="acc-header__title">Silsilah yang Tidak Ada Rujukan Pastinya</h3>
               </div>
               <div className="acc-header__right">
-                <span>Nabi Ismail a.s. → Nabi Adam a.s.</span>
+                <span>Gen. 58 → 78 (Nabi Ismail a.s. → Nabi Adam a.s.)</span>
                 <svg
                   className="acc-header__icon"
                   viewBox="0 0 24 24"
@@ -220,6 +227,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                   if (!matchesSearch(x)) return null;
                   const nodeId = `tanpaRujukan-${i}`;
                   const isOpenNode = openNodes[nodeId];
+                  const genNum = offsetIII + i + 1;
                   return (
                     <li key={nodeId} className={`node ${x.key ? 'is-key' : ''} ${isOpenNode ? 'is-open' : ''}`}>
                       <span className="node__dot" aria-hidden="true"></span>
@@ -230,7 +238,7 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                         aria-expanded={isOpenNode}
                         onClick={() => x.note && toggleNode(nodeId)}
                       >
-                        <span className="node__num">Generasi {i + 1}</span>
+                        <span className="node__num">Generasi {genNum}</span>
                         {i > 0 && <span style={{ opacity: 0.5, fontSize: '0.82em' }}>bin </span>}
                         {x.n}
                         {x.note && <span className="node__hint">(klik detail)</span>}
