@@ -22,7 +22,7 @@ const NAV_LINKS = [
   { href: '#anak', num: 'IX', label: 'Putra-Putri Rasulullah' },
   { href: '#sahabat', num: 'X', label: 'Hubungan dengan Sahabat' },
   { href: '#wafat', num: 'XI', label: 'Wafat Rasulullah' },
-  { href: '/sumber', num: '—', label: 'Sumber' },
+  { href: '/sumber', num: '—', label: 'Sumber & Rujukan' },
 ];
 
 export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => {
@@ -62,6 +62,8 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => 
     }
   };
 
+  const isSumberPage = pathname === '/sumber';
+
   return (
     <>
       <div
@@ -79,107 +81,28 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => 
           <div className="rail__title">Sirah Nabawiyah</div>
         </div>
         <div className="rail__nav" id="railNav">
-          {pathname === '/sumber' ? (
-            <>
+          {NAV_LINKS.map((link) => {
+            const isActive = isSumberPage
+              ? link.href === '/sumber'
+              : activeSection === link.href;
+
+            const isHashLink = link.href.startsWith('#');
+            const targetHref = isSumberPage && isHashLink ? `/${link.href}` : link.href;
+
+            return (
               <Link
-                className="rail__link"
-                href="/#beranda"
+                key={link.href}
+                className={`rail__link ${isActive ? 'is-active' : ''}`}
+                href={targetHref}
                 onClick={handleLinkClick}
               >
-                <span className="rail__num">←</span> Beranda Utama
+                <span className="rail__num">{link.num}</span> {link.label}
               </Link>
-              <Link
-                className="rail__link"
-                href="/#nasab"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">I</span> Nasab Rasulullah
-              </Link>
-              <Link
-                className="rail__link"
-                href="/#bani-hasyim"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">II</span> Keluarga Bani Hasyim
-              </Link>
-              <Link
-                className="rail__link"
-                href="/#sebelum"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">IV</span> Sebelum Kenabian
-              </Link>
-              <Link
-                className="rail__link"
-                href="/#kenabian"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">V</span> Kenabian &amp; Dakwah
-              </Link>
-              <Link
-                className="rail__link"
-                href="/#hijrah"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">VI</span> Hijrah ke Madinah
-              </Link>
-              <Link
-                className="rail__link"
-                href="/#perang"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">VII</span> Peperangan
-              </Link>
-              <Link
-                className="rail__link"
-                href="/#sahabat"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">X</span> Hubungan Sahabat
-              </Link>
-              <Link
-                className="rail__link"
-                href="/#wafat"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">XI</span> Wafat Rasulullah
-              </Link>
-              <Link
-                className="rail__link is-active"
-                href="/sumber"
-                onClick={handleLinkClick}
-              >
-                <span className="rail__num">—</span> Halaman Sumber
-              </Link>
-            </>
-          ) : (
-            NAV_LINKS.map((link) => {
-              const isActive = activeSection === link.href;
-              const isExternal = link.href.startsWith('/');
-              return isExternal ? (
-                <Link
-                  key={link.href}
-                  className={`rail__link ${isActive ? 'is-active' : ''}`}
-                  href={link.href}
-                  onClick={handleLinkClick}
-                >
-                  <span className="rail__num">{link.num}</span> {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  className={`rail__link ${isActive ? 'is-active' : ''}`}
-                  href={link.href}
-                  onClick={handleLinkClick}
-                >
-                  <span className="rail__num">{link.num}</span> {link.label}
-                </a>
-              );
-            })
-          )}
+            );
+          })}
         </div>
         <div className="rail__foot">
-          {pathname === '/sumber'
+          {isSumberPage
             ? 'Dokumentasi sumber rujukan sirah nabawiyah.'
             : 'Media edukasi perjalanan hidup Rasulullah ﷺ.'}
         </div>

@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   title: 'Sirah Nabawiyah — Perjalanan Hidup Rasulullah ﷺ',
   description:
     'Ringkasan interaktif perjalanan hidup Rasulullah ﷺ dari nasab, keluarga Bani Hasyim, kenabian, hijrah, peperangan, hingga wafatnya beliau berdasarkan berbagai sumber rujukan sirah nabawiyah.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export const viewport: Viewport = {
