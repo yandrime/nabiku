@@ -1,0 +1,56 @@
+{
+  "sebelum": {
+    "kicker": "Part V",
+    "title": "Before Prophethood",
+    "intro": "The first forty years before being commissioned as the Messenger of Allah. Al-Mubarakfuri notes this period as the formation of noble character, trustworthiness (al-Amin), and divine protection from pre-Islamic ignorance.",
+    "items": [
+      { "y": "571 CE", "t": "Birth in Makkah", "d": "On Monday, Rabi'ul Awwal, in the Year of the Elephant. Born orphaned; his grandfather named him Muhammad — a name uncommon among Arabs at the time.", "gold": true },
+      { "y": "0–4 yrs", "t": "Among Bani Sa'ad", "d": "After being nursed by Tsuwaibah for a few days, he was raised by Halimah as-Sa'diyah in the desert. The blessings experienced by Halimah's family led them to keep him longer than customary." },
+      { "y": "± 4 yrs", "t": "Splitting of the Chest", "d": "Two angels visited him while playing, opened his chest, and purified his heart. This event prompted Halimah to return him to his mother." },
+      { "y": "6 yrs", "t": "Mother's Passing in al-Abwa'", "d": "Aminah passed away on the return journey from visiting Yatsrib. Ummu Aiman brought him back to Makkah." },
+      { "y": "8 yrs", "t": "Grandfather's Passing & Custody to Abu Talib", "d": "Abdul Muttalib entrusted Abu Talib with his care — a guardianship that extended into protection for over forty years." },
+      { "y": "12 yrs", "t": "Journey to Sham & Bahira the Monk", "d": "Joined his uncle's trade caravan. In Busra, the monk Bahira recognized the signs of prophethood and advised Abu Talib to take him home for safety." },
+      { "y": "15 yrs", "t": "Fijar War", "d": "Inter-tribal conflict during sacred months. His role was supporting his uncles by gathering arrows." },
+      { "y": "20 yrs", "t": "Hilf al-Fudul (Pact of Virtue)", "d": "A pact established at the house of Abdullah bin Jud'an to defend anyone wronged in Makkah. After prophethood, he stated he would still uphold it if called upon.", "gold": true },
+      { "y": "± 25 yrs", "t": "Trading with Khadijah's Capital", "d": "Managed Khadijah's trade merchandise to Sham accompanied by Maisarah. Maisarah's account of his honesty and noble character initiated Khadijah's interest." },
+      { "y": "25 yrs", "t": "Marriage to Khadijah", "d": "Khadijah was forty years old and the most noble woman in her society — in lineage, wealth, and intellect. His dowry was twenty young camels.", "gold": true },
+      { "y": "35 yrs", "t": "Kaaba Renovation & Black Stone Arbitration", "d": "When tribes nearly went to war over placing the Black Stone, he spread his cloak and asked each tribal leader to hold an edge together.", "gold": true },
+      { "y": "± 38–40 yrs", "t": "Seclusion in Hira Cave", "d": "As forty approached, his inclination for solitude grew stronger, especially during Ramadan — leading up to the first revelation." }
+    ]
+  },
+  "hijrah": {
+    "kicker": "Part VI",
+    "title": "Migration to Madinah",
+    "intro": "The defining historical event marking the beginning of the Hijri calendar. Meticulous strategy, strict confidentiality, and divine help altered the course of history from vulnerability in Makkah to a new center of civilization.",
+    "items": [
+      { "y": "Beginning", "t": "Plot at Dar al-Nadwah", "d": "Quraysh leaders agreed to pick a young warrior from each tribe to strike the Prophet together, preventing Bani Hashim from taking revenge against all tribes.", "gold": true },
+      { "y": "Night", "t": "Ali in the Prophet's Bed", "d": "Ali bin Abu Talib slept covered in the Prophet's bed, tasked with returning goods entrusted to the Prophet by Makkans." },
+      { "y": "Night", "t": "Departure from Surrounded House", "d": "He walked past the surrounders unnoticed, proceeding to the house of Abu Bakr." },
+      { "y": "3 nights", "t": "Hiding in Thawr Cave", "d": "Heading south — opposite to Madinah — to mislead pursuers. Quraysh posted a 100-camel reward for capturing either of them.", "gold": true },
+      { "y": "Logistics", "t": "One Family Supporting the Operation", "d": "Abdullah bin Abu Bakr brought city news, Asma' bint Abu Bakr delivered provisions — earning her title Dzatun Nithaqain — and Amir bin Fuhairah grazed sheep to erase footprints and supply milk." },
+      { "y": "Route", "t": "Guide Outside the Circle", "d": "Abdullah bin Uraiqith, still adhering to his people's faith, was hired as a guide for his mastery of desert paths — a tactical decision demonstrating professionalism." },
+      { "y": "On Road", "t": "Suraqah bin Malik", "d": "Bounty hunter who nearly caught up, but his horse repeatedly stumbled. He returned with a guarantee of safety from the Prophet — and later embraced Islam." },
+      { "y": "12 Rabi'ul Awwal", "t": "Arrival in Quba'", "d": "Stayed four days and built Quba' Mosque, the first mosque founded upon piety.", "gold": true },
+      { "y": "Friday", "t": "First Friday Prayer", "d": "En route to the city center, he performed the first Friday prayer in the settlement of Bani Salim bin Auf." },
+      { "y": "Arrival", "t": "Camel Stopping at Orphans' Land", "d": "He allowed his camel to walk freely so no tribe felt bypassed. It stopped on land owned by orphans Sahl and Suhail — later purchased for Al-Masjid an-Nabawi.", "gold": true },
+      { "y": "Afterward", "t": "Three Foundations of a New Society", "d": "Building Al-Masjid an-Nabawi as the center, establishing brotherhood between Muhajirun and Ansar, and drafting the written charter governing Madinah's inhabitants including Jewish tribes." }
+    ]
+  },
+  "wafat": {
+    "kicker": "Part IX",
+    "title": "Passing of the Prophet ﷺ",
+    "intro": "The final days of the greatest human after completing the delivery of the divine message over twenty-three years. The most poignant moment for the Companions, testing the firmness of their faith.",
+    "items": [
+      { "y": "10 AH", "t": "Signals of Farewell at Farewell Pilgrimage", "d": "In his sermon at Arafat, he called upon the people to bear witness that the message had been delivered, speaking words perceived by many as a farewell.", "gold": true },
+      { "y": "Safar 11 AH", "t": "Onset of Illness", "d": "After visiting Baqi' one night, he experienced a severe headache accompanied by high fever. The illness lasted about eleven days." },
+      { "y": "Final week", "t": "Moving to Aishah's Room", "d": "He requested permission from his wives to be nursed in Aishah's room, and they agreed. He was supported as he moved." },
+      { "y": "5 days before", "t": "Abu Bakr Appointed to Lead Prayers", "d": "His fever worsened. When Aishah repeatedly requested the duty be transferred, he firmly instructed Abu Bakr to lead the prayer.", "gold": true },
+      { "y": "3 days before", "t": "Final Instructions", "d": "Including the counsel that no one should pass except having good expectations of Allah, and reminders regarding prayer and kindness to servants." },
+      { "y": "1–2 days before", "t": "Coming Out for Dhuhr Prayer", "d": "His pain temporarily eased. Supported by two men, he came out and sat on the left of Abu Bakar; Abu Bakr followed his prayer and amplified takbir." },
+      { "y": "Day before", "t": "Freeing Servants & Giving Charity", "d": "He freed two servants, gave away remaining dinars in charity, and donated his weapons to the Muslims. His armor was pledged to a Jewish trader for grain." },
+      { "y": "Monday morning", "t": "Lifting the Curtain", "d": "As Muslims prepared for Fajr prayer, he lifted the room curtain, smiled watching them lined up in prayer. Abu Bakr thought he was stepping out to lead — many thought it signaled recovery.", "gold": true },
+      { "y": "Forenoon, Mon", "t": "Ar-Rafiq al-A'la", "d": "He passed away in the forenoon of Monday, 12 Rabi'ul Awwal 11 AH, in Aishah's lap, at age sixty-three. His final audible words were a supplication to be with ar-Rafiq al-A'la — the Supreme Companion.", "gold": true },
+      { "y": "Tuesday", "t": "Buried in Aishah's Room", "d": "Following the principle that prophets are buried where they pass, the grave was dug by Abu Talhah in Aishah's room. Burial took place on Tuesday night." }
+    ]
+  }
+}

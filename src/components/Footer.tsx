@@ -1,13 +1,19 @@
+'use client';
+
 import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export const Footer: React.FC = () => {
+  const { data } = useLanguage();
+  const ui = data.ui;
+
   return (
     <footer className="foot">
       <div className="foot__in">
-        <div className="foot__t">Sirah Nabawiyah App</div>
-        <p>Media edukasi interaktif sejarah dan perjalanan hidup Rasulullah ﷺ.</p>
+        <div className="foot__t">{ui.footerTitle}</div>
+        <p>{ui.footerTagline}</p>
         <div className="foot__meta">
-          Ringkasan edukatif · disadur dari berbagai sumber · rujuk ulama untuk kesimpulan hukum
+          {ui.footerMeta}
         </div>
       </div>
     </footer>

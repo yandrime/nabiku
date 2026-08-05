@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { COMPANIONS } from '../data/companions';
+import { useLanguage } from '@/context/LanguageContext';
 import { CompanionItem } from '../types';
 
 interface CompanionsSectionProps {
@@ -7,13 +9,17 @@ interface CompanionsSectionProps {
 }
 
 export const CompanionsSection: React.FC<CompanionsSectionProps> = ({ searchQuery }) => {
+  const { data } = useLanguage();
+  const compData = data.companions;
+  const companionsList = compData.items as CompanionItem[];
+
   const matchesSearch = (item: CompanionItem) => {
     if (!searchQuery) return true;
     const plain = `${item.n} ${item.d}`.toLowerCase();
     return plain.includes(searchQuery.toLowerCase());
   };
 
-  const filteredCompanions = COMPANIONS.filter(matchesSearch);
+  const filteredCompanions = companionsList.filter(matchesSearch);
 
   if (searchQuery && filteredCompanions.length === 0) {
     return null;
@@ -22,11 +28,9 @@ export const CompanionsSection: React.FC<CompanionsSectionProps> = ({ searchQuer
   return (
     <section className="sec" id="sahabat">
       <div className="sec__head">
-        <span className="sec__kicker">Bagian X</span>
-        <h2 className="sec__h">Hubungan dengan Sahabat</h2>
-        <p className="sec__intro">
-          Generasi pertama yang dididik langsung oleh Rasulullah ﷺ — para sahabat yang menyertai perjuangan beliau, meriwayatkan sunnah, dan menanggung pengorbanan terbesar dalam menegakkan Islam.
-        </p>
+        <span className="sec__kicker">{compData.kicker}</span>
+        <h2 className="sec__h">{compData.title}</h2>
+        <p className="sec__intro">{compData.intro}</p>
         <div className="rule"></div>
       </div>
 

@@ -1,0 +1,35 @@
+{
+  "kicker": "Bagian II",
+  "title": "Keluarga Bani Hasyim",
+  "intro": "Keluarga Rasulullah lazim disebut keluarga Hasyimiyah, dinisbatkan kepada kakek beliau, Hasyim bin Abdu Manaf. Inilah rumpun yang memegang hak melayani jamaah haji di Mekah dan yang kelak menanggung pemboikotan demi melindungi beliau.",
+  "treeContent": "pohon keluarga bani hasyim abdul muthalib anak abdul muthalib syaibah hasyim amr abdu manaf abdullah abu thalib hamzah abbas abu lahab harits zubair ghaidaq muqawwim dhirar shafiyyah syaffa ummu hakim barrah atikah arwa umaimah putra putri anak perempuan",
+  "gen1Label": "Generasi 1",
+  "gen1Name": "Hasyim (Amr) bin Abdu Manaf",
+  "gen1Spouse": "menikah Salma binti Amr — Bani Adi bin Najjar, Yatsrib",
+  "gen2Label": "Generasi 2",
+  "gen2Name": "Abdul Muthalib (Syaibah)",
+  "gen2Note": "lahir ± 497 M · penggali kembali sumur Zamzam",
+  "gen3Label": "Generasi 3 — Anak-Anak Abdul Muthalib",
+  "sonsLabel": "10 Putra",
+  "daughtersLabel": "6 Putri",
+  "sons": [
+    { "name": "Abdullah", "meta": "<em>(ayah Nabi)</em>", "variant": "g" },
+    { "name": "Abu Thalib", "variant": "g" },
+    { "name": "Hamzah", "variant": "g" },
+    { "name": "Abbas", "variant": "g" },
+    { "name": "Abu Lahab", "variant": "r" },
+    { "name": "Harits" },
+    { "name": "Zubair" },
+    { "name": "Ghaidaq" },
+    { "name": "Muqawwim" },
+    { "name": "Dhirar" }
+  ],
+  "daughters": [
+    { "name": "Shafiyyah", "meta": "<em>(ibu Az-Zubair)</em>", "variant": "g" },
+    { "name": "Ash-Syaffa (Ummu Hakim)" },
+    { "name": "Barrah" },
+    { "name": "Atikah" },
+    { "name": "Arwa" },
+    { "name": "Umaimah" }
+  ]
+}

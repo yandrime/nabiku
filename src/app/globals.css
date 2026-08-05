@@ -154,20 +154,33 @@ a {
   line-height: 1.55;
 }
 
-/* --- Bar Atas (Mobile) --- */
+/* --- Bar Atas (Header TopBar) --- */
 .topbar {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
-  left: 0;
+  left: var(--rail);
   right: 0;
+  height: 53px;
   z-index: 70;
   background: var(--lapis-900);
   color: #F2EDE0;
-  padding: 10px 14px;
+  padding: 8px 24px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(198, 161, 91, .28);
+  box-shadow: 0 4px 16px rgba(11, 23, 41, 0.35);
+}
+
+.topbar__left {
+  display: flex;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid rgba(198, 161, 91, .28);
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
 }
 
 .topbar__btn {
@@ -178,15 +191,56 @@ a {
   font-size: 11px;
   letter-spacing: .08em;
   text-transform: uppercase;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: var(--r);
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topbar__btn:hover {
+  background: rgba(198, 161, 91, 0.15);
+  border-color: var(--gold-bright);
 }
 
 .topbar__t {
   font-family: var(--f-display);
-  font-size: 17px;
+  font-size: 18px;
+  color: var(--gold-bright);
 }
+
+.lang-switcher {
+  display: flex;
+  background: rgba(198, 161, 91, 0.12);
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  border-radius: var(--r);
+  padding: 2px;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(242, 237, 224, 0.7);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: var(--gold-bright);
+}
+
+.lang-btn.is-active {
+  background: var(--gold);
+  color: var(--lapis-900);
+  font-weight: 700;
+}
+
 
 .scrim {
   display: none;
@@ -199,6 +253,7 @@ a {
 /* --- MAIN & CONTAINER --- */
 .main {
   margin-left: var(--rail);
+  padding-top: 53px;
 }
 
 .wrap {
@@ -325,7 +380,7 @@ a {
   background: var(--paper-2);
   border-bottom: 1px solid var(--paper-3);
   position: sticky;
-  top: 0;
+  top: 53px;
   z-index: 40;
 }
 
@@ -996,6 +1051,16 @@ p {
   margin-bottom: 9px;
 }
 
+.tree__sublbl {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 7px;
+}
+
 .tree__row {
   display: flex;
   flex-wrap: wrap;
@@ -1073,7 +1138,8 @@ p {
     transform: translateX(0);
   }
   .topbar {
-    display: flex;
+    left: 0;
+    padding: 8px 16px;
   }
   .scrim.is-on {
     display: block;

@@ -1,0 +1,177 @@
+{
+  "kicker": "Part VII",
+  "title": "All Expeditions & Battles",
+  "intro": "During the ten years in Madinah, the Prophet personally led 27 ghazwahs and dispatched dozens of sariyyahs. Sheikh al-Mubarakfuri emphasizes that the primary purpose of warfare in Islam was not destruction, but eliminating oppression and clearing the path for dawah.",
+  "filterAll": "All years",
+  "emptyMessage": "No expedition data found for this year filter.",
+  "labels": {
+    "sariyyah": "Sariyyah",
+    "ghazwah": "Ghazwah",
+    "campuran": "Series"
+  },
+  "items": [
+    {
+      "y": "1 AH", "ord": 1, "nm": "Opening Expeditions", "sub": "Saiful Bahr, Rabigh, Kharrar, Abwa', Buwath, Dzul Usyairah", "ty": "campuran",
+      "p": [
+        "A series of small unit detachments and non-combative expeditions led by Hamzah, Ubaidah bin Harith, and Sa'ad bin Abi Waqqash.",
+        "The objective was not attack, but projecting presence, securing trade routes around Madinah, and concluding pacts with tribes along Quraysh trade routes."
+      ]
+    },
+    {
+      "y": "2 AH", "ord": 2, "nm": "Sariyyah Nakhlah", "sub": "Led by Abdullah bin Jahsh · Rajab month", "ty": "sariyyah",
+      "p": [
+        "A small reconnaissance detachment with sealed orders to be opened after two days of travel.",
+        "An unauthorized skirmish occurred during a sacred month, causing commotion. Quranic revelation subsequently placed the matter in perspective: persecution and expulsion from the Sacred Mosque are far greater sins than fighting in a sacred month."
+      ]
+    },
+    {
+      "y": "2 AH", "ord": 3, "nm": "The Great Battle of Badr", "sub": "17 Ramadan · 313 vs approx 1,000", "ty": "ghazwah", "big": true,
+      "p": [
+        "Initiated as an attempt to intercept Abu Sufyan's trade caravan. The caravan escaped, but Quraysh's main army advanced from Makkah.",
+        "The Prophet consulted his companions; the Ansar pledged complete allegiance. Upon the advice of Hubab bin Mundhir, the army secured the water wells first.",
+        "Muslims set out with meager equipment — sharing riding camels in shifts.",
+        "The result was decisive: seventy pagan leaders were killed including <strong>Abu Jahl</strong>, seventy captured, while fourteen Muslim martyrs fell.",
+        "The treatment of prisoners established precedent: several ransomed themselves by teaching reading and writing to Madinan children."
+      ]
+    },
+    {
+      "y": "2 AH", "ord": 4, "nm": "Expedition of Bani Qainuqa'", "sub": "Shawwal · Jewish tribe of Madinah", "ty": "ghazwah",
+      "p": [
+        "The first treaty violation by a Jewish tribe in Madinah, triggered by the harassment of a Muslim woman at the marketplace.",
+        "Concluded with a brief siege and their expulsion from Madinah."
+      ]
+    },
+    {
+      "y": "2 AH", "ord": 5, "nm": "Battle of Sawiq", "sub": "Dzulhijjah · Abu Sufyan", "ty": "ghazwah",
+      "p": [
+        "Abu Sufyan vowed not to wash until avenging Badr, executing a raid on Madinah's outskirts.",
+        "He fled pursued by Muslim forces, discarding sacks of <em>sawiq</em> (roasted barley flour) to lighten his load — giving the expedition its name."
+      ]
+    },
+    {
+      "y": "3 AH", "ord": 6, "nm": "Battle of Uhud", "sub": "Shawwal · 700 vs 3,000", "ty": "ghazwah", "big": true,
+      "p": [
+        "Quraysh returned seeking revenge for Badr with a formidable army accompanied by women beating drums to rally spirits.",
+        "The Prophet stationed <strong>fifty archers</strong> on Mount Rumat under Abdullah bin Jubair with strict orders: hold position regardless of outcome.",
+        "<strong>Abdullah bin Ubay</strong> withdrew one-third of the troops mid-way, leaving seven hundred fighters.",
+        "Muslims gained early advantage. The turning point came when archers abandoned their posts for spoils; Khalid bin Walid — then leading Quraysh cavalry — flanked from behind.",
+        "Seventy companions were martyred, including <strong>Hamzah</strong> and <strong>Mush'ab bin Umair</strong>. The Prophet himself was injured on the face.",
+        "The following morning, he led the pursuit to <strong>Hamra'ul Asad</strong> to restore morale and deter Quraysh from turning back to attack Madinah."
+      ]
+    },
+    {
+      "y": "4 AH", "ord": 7, "nm": "Tragedies of Raji' & Bi'r Ma'unah", "sub": "Safar · two betrayals", "ty": "sariyyah",
+      "p": [
+        "At <strong>Raji'</strong>, a delegation of teachers requested to teach Islam was betrayed and slain; Khubaib bin Adi and Zaid bin Datsinah were sold to Makkah and executed.",
+        "At <strong>Bi'r Ma'unah</strong>, nearly seventy Quran reciters dispatched at a chieftain's request were ambushed and killed. The Prophet recited Qunut supplication for a full month following this event.",
+        "These tragedies demonstrated that major threats emanated from interior desert tribes, not solely Makkah."
+      ]
+    },
+    {
+      "y": "4 AH", "ord": 8, "nm": "Expedition of Bani Nadhir", "sub": "Rabi'ul Awwal · Jewish tribe of Madinah", "ty": "ghazwah",
+      "p": [
+        "Foiled assassination attempt on the Prophet by dropping a boulder from a rooftop during a visit.",
+        "The siege resulted in their expulsion; some relocated to Khaibar. Surah al-Hashr was revealed regarding this event."
+      ]
+    },
+    {
+      "y": "4 AH", "ord": 9, "nm": "Second Badr, Dzat ar-Riqa' & Dumat al-Jandal", "sub": "Sha'ban 4 AH – Rabi'ul Awwal 5 AH", "ty": "ghazwah",
+      "p": [
+        "<strong>Second Badr</strong>: honoring Abu Sufyan's post-Uhud challenge. Muslims arrived, Quraysh failed to appear — a psychological victory.",
+        "<strong>Dzat ar-Riqa'</strong>: confronting Ghatafan tribe mobilization. During this march, rules for <em>Salat al-Khawf</em> (Fear Prayer) were legislated.",
+        "<strong>Dumat al-Jandal</strong>: a distant march toward Syrian borderlands to secure northern trade routes."
+      ]
+    },
+    {
+      "y": "5 AH", "ord": 10, "nm": "Battle of the Trench (Ahzab / Khandaq)", "sub": "Shawwal · month-long siege", "ty": "ghazwah", "big": true,
+      "p": [
+        "The largest coalition faced: Quraysh, Ghatafan, and allies numbering ten thousand fighters.",
+        "Upon <strong>Salman al-Farisi's</strong> suggestion, a trench was dug along Madinah's open northern border. This tactic, novel to Arab warfare, neutralized cavalry advantage.",
+        "Compounded by Bani Quraizhah's internal betrayal, severe hunger, and biting cold. The Quran records the intense distress.",
+        "The coalition collapsed without major open combat after internal rift and severe cold winds destroyed their encampment.",
+        "Afterward, the Prophet announced strategic initiative shifted to the Muslims."
+      ]
+    },
+    {
+      "y": "5 AH", "ord": 11, "nm": "Expedition of Bani Quraizhah", "sub": "Dzulqa'dah · resolving inner betrayal", "ty": "ghazwah",
+      "p": [
+        "Betrayal during the critical moment of the Trench required immediate resolution.",
+        "The siege lasted twenty-five days. They requested <strong>Sa'ad bin Mu'adz</strong>, their former ally, to pass judgment, and his verdict was executed."
+      ]
+    },
+    {
+      "y": "6 AH", "ord": 12, "nm": "Expedition of Bani Mustaliq (Muraisi')", "sub": "Sha'ban · and aftermath events", "ty": "ghazwah",
+      "p": [
+        "Preempted Bani Mustaliq's attack plan; engagement was swift.",
+        "Two major incidents occurred on return: hypocrites' attempt to divide Muhajirun and Ansar, and the <strong><em>Ifk</em> affair</strong> — false slander against Aishah cleared by divine revelation in Surah an-Nur.",
+        "The Prophet's marriage to <strong>Juwairiyah</strong>, daughter of their chief, prompted Muslims to release one hundred captives as relatives of the Messenger."
+      ]
+    },
+    {
+      "y": "6 AH", "ord": 13, "nm": "Treaty of Hudaibiyah", "sub": "Dzulqa'dah · 1,400 companions · Pledge of Ridhwan", "ty": "ghazwah", "big": true,
+      "p": [
+        "Departed for Umrah unarmed, bringing sacrificial animals. Quraysh blocked entry to Makkah.",
+        "Rumor of Uthman bin Affan's murder prompted <strong>Pledge of Ridhwan</strong> under a tree — a solemn oath of steadfastness.",
+        "Terms appeared disadvantageous: 10-year truce, Umrah delayed to next year, and Makkan defectors returned while Muslim defectors were not.",
+        "Some companions hesitated initially, but peace enabled widespread dawah. Over the next two years, converts surpassed all prior totals. The Quran named it <em>a clear victory</em>."
+      ]
+    },
+    {
+      "y": "7 AH", "ord": 14, "nm": "Battle of Khaibar", "sub": "Muharram · fortress by fortress", "ty": "ghazwah", "big": true,
+      "p": [
+        "Dismantling the remaining Jewish stronghold that drove the Ahzab coalition.",
+        "Fortresses fell sequentially: Na'im, Sha'b, Zubair, Ubay, and Nazar. The banner was handed to <strong>Ali bin Abu Talib</strong>, who led the breakthrough.",
+        "Concluded with agreement: inhabitants farmed the land sharing half the harvest.",
+        "Occurred the incident of <strong>poisoned mutton</strong> served to the Prophet, and his marriage to <strong>Shafiyah</strong> after setting her free.",
+        "Followed by subjugation of Wadil Qura, Taima', and Fadak, and <strong>Umrah Qadha'</strong> in Dzulqa'dah."
+      ]
+    },
+    {
+      "y": "8 AH", "ord": 15, "nm": "Battle of Mu'tah", "sub": "Jumadal Ula · 3,000 vs Byzantine Army", "ty": "ghazwah", "big": true,
+      "p": [
+        "The largest expedition during the Prophet's life that he did not personally attend, responding to the murder of his envoy.",
+        "Command was designated in sequence: <strong>Zaid bin Harithah</strong>, if martyred then <strong>Ja'far bin Abu Talib</strong>, then <strong>Abdullah bin Rawahah</strong>. All three fell in a single day.",
+        "Command passed to <strong>Khalid bin Walid</strong>, who executed a tactical retreat without destruction — earning his title <em>Saifullah</em> (Sword of Allah).",
+        "Despite no battlefield conquest, standing against a vast empire transformed how northern Arab tribes viewed Madinah."
+      ]
+    },
+    {
+      "y": "8 AH", "ord": 16, "nm": "Conquest of Makkah (Fathu Makkah)", "sub": "Ramadan · 10,000 troops · virtually bloodless", "ty": "ghazwah", "big": true,
+      "p": [
+        "Triggered by Quraysh's breach of Hudaibiyah treaty by assisting allies in attacking a tribe allied with the Prophet.",
+        "Preparations were conducted in total secrecy. Forces advanced lighting campfires at Marruz-Zahran to demonstrate overwhelming strength.",
+        "<strong>Abu Sufyan</strong> embraced Islam before entry, and his home was designated a sanctuary.",
+        "The city was entered from four directions without resistance. He entered with head bowed in humility.",
+        "Idols around the Kaaba were destroyed, followed by a <strong>general amnesty</strong> announced for Makkans who had opposed him for two decades."
+      ]
+    },
+    {
+      "y": "8 AH", "ord": 17, "nm": "Battle of Hunain", "sub": "Shawwal · 12,000 vs Hawazin & Thaqif", "ty": "ghazwah", "big": true,
+      "p": [
+        "Hawazin and Thaqif prepared an ambush in a narrow valley with archers positioned on heights.",
+        "Part of the Muslim army fell back initially — linked to pride in large numbers. The Quran notes this directly.",
+        "The Prophet stood firm, calling troops back through Abbas; ranks reformed and turned the tide to victory.",
+        "Followed by siege of <strong>Ta'if</strong> and distribution of spoils at Ji'ranah — where he reassured the Ansar with the famous words that others return with goats while they return with Allah's Messenger."
+      ]
+    },
+    {
+      "y": "9 AH", "ord": 18, "nm": "Battle of Tabuk", "sub": "Rajab · 30,000 troops · <em>Jaish al-'Usrah</em>", "ty": "ghazwah", "big": true,
+      "p": [
+        "Responding to reports of Byzantine mobilization at northern borders.",
+        "Conducted during mid-summer, drought, and date harvest — earning the army the title <em>Jaish al-'Usrah</em> (Army of Hardship). Uthman bin Affan and Abu Bakr gave immense donations.",
+        "Departing from custom, the Prophet announced the destination from the start due to distance.",
+        "No combat occurred. Resulted in treaties with border rulers including Ailah and Dumat al-Jandal.",
+        "Exposed hypocrites, while <strong>Ka'ab bin Malik</strong> and two companions who lagged without excuse underwent 50 days of social isolation before repentance was accepted.",
+        "This was the final expedition led by Prophet Muhammad ﷺ."
+      ]
+    },
+    {
+      "y": "9–10 AH", "ord": 19, "nm": "Year of Delegations & Farewell Pilgrimage", "sub": "Amul Wufud · Arafat Sermon", "ty": "campuran",
+      "p": [
+        "After Makkah's conquest, tribes arrived continuously embracing Islam — known as <em>Amul Wufud</em> (Year of Delegations).",
+        "In 10 AH, he led the <strong>Farewell Pilgrimage</strong> with a vast gathering, delivering the Arafat Sermon affirming the sanctity of life and property, abolition of usury, women's rights, and universal Muslim brotherhood.",
+        "The final expedition prepared was under <strong>Usamah bin Zaid</strong> toward Sham, dispatched after his passing."
+      ]
+    }
+  ]
+}

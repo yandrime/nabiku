@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { WIVES, KIDS } from '../data/family';
+import { useLanguage } from '@/context/LanguageContext';
 import { CardItem } from '../types';
 
 interface FamilySectionProps {
@@ -7,14 +9,21 @@ interface FamilySectionProps {
 }
 
 export const FamilySection: React.FC<FamilySectionProps> = ({ searchQuery }) => {
+  const { data } = useLanguage();
+  const wivesData = data.family.wives;
+  const kidsData = data.family.kids;
+
+  const wivesList = wivesData.items as CardItem[];
+  const kidsList = kidsData.items as CardItem[];
+
   const matchesSearch = (item: CardItem) => {
     if (!searchQuery) return true;
     const plain = `${item.n} ${item.meta} ${item.b.join(' ')}`.replace(/<[^>]+>/g, '').toLowerCase();
     return plain.includes(searchQuery.toLowerCase());
   };
 
-  const filteredWives = WIVES.filter(matchesSearch);
-  const filteredKids = KIDS.filter(matchesSearch);
+  const filteredWives = wivesList.filter(matchesSearch);
+  const filteredKids = kidsList.filter(matchesSearch);
 
   const showWives = !searchQuery || filteredWives.length > 0;
   const showKids = !searchQuery || filteredKids.length > 0;
@@ -27,11 +36,9 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ searchQuery }) => 
       {showWives && (
         <section className="sec" id="istri">
           <div className="sec__head">
-            <span className="sec__kicker">Bagian VIII</span>
-            <h2 className="sec__h">Istri-Istri Rasulullah ﷺ</h2>
-            <p className="sec__intro">
-              Sebelas Ummahatul Mu&apos;minin (Ibu Kaum Beriman) yang mendampingi kehidupan rumah tangga Rasulullah. Setiap pernikahan mengandung hikmah kemanusiaan, dakwah, perlindungan sosial, atau pengukuhan ikatan kabilah.
-            </p>
+            <span className="sec__kicker">{wivesData.kicker}</span>
+            <h2 className="sec__h">{wivesData.title}</h2>
+            <p className="sec__intro">{wivesData.intro}</p>
             <div className="rule"></div>
           </div>
 
@@ -55,11 +62,9 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ searchQuery }) => 
       {showKids && (
         <section className="sec" id="anak">
           <div className="sec__head">
-            <span className="sec__kicker">Bagian IX</span>
-            <h2 className="sec__h">Putra-Putri Rasulullah ﷺ</h2>
-            <p className="sec__intro">
-              Tujuh putra-putri beliau — tiga putra dan empat putri. Seluruhnya lahir dari Ibunda Khadijah binti Khuwailid, kecuali Ibrahim yang lahir dari Mariyah al-Qibthiyah. Ketiga putra wafat sewaktu masih kanak-kanak.
-            </p>
+            <span className="sec__kicker">{kidsData.kicker}</span>
+            <h2 className="sec__h">{kidsData.title}</h2>
+            <p className="sec__intro">{kidsData.intro}</p>
             <div className="rule"></div>
           </div>
 

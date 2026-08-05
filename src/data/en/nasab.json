@@ -1,0 +1,66 @@
+{
+  "kicker": "Part I",
+  "title": "Lineage of the Prophet ﷺ",
+  "intro": "Al-Mubarakfuri divides the lineage of the Prophet into three parts. The first part — from Muhammad to Adnan — is agreed upon by all genealogists. The second part, from Adnan to Ishmael, has scholarly differences. The third part, from Abraham to Adam, derives from Judeo-Christian traditions and is unconfirmed by scholars.",
+  "disepakati": {
+    "badge": "Part I",
+    "title": "Agreed Lineage",
+    "meta": "21 Generations · Gen. 1 → 21 (Muhammad ﷺ → Adnan)",
+    "desc": "The first part is universally agreed upon by consensus (ijma') among scholars, historians, and genealogists without dispute. The order of 21 generations from Prophet Muhammad ﷺ to Adnan is authentically recorded.",
+    "items": [
+      { "n": "Muhammad ﷺ", "key": true, "note": "Messenger of Allah, son of Abdullah. Born in Makkah in the Year of the Elephant (571 CE)." },
+      { "n": "Abdullah", "note": "His noble father. Passed away in Yatsrib before Prophet Muhammad ﷺ was born." },
+      { "n": "Abdul Muttalib", "note": "Original name <em>Syaibah</em>. The grandfather who raised him and a prominent leader of Quraysh." },
+      { "n": "Hashim", "note": "Original name <em>Amr</em>. From his name arose the Hashimite family designation." },
+      { "n": "Abdu Manaf", "note": "Original name <em>al-Mughirah</em>. A highly revered leader of Quraysh." },
+      { "n": "Qushay", "note": "Original name <em>Zaid</em>. Unifier of the Quraysh tribes and custodian of the Kaaba." },
+      { "n": "Kilab", "note": "Lineage junction with the maternal line of the Prophet, Aminah bint Wahb." },
+      { "n": "Murrah" }, { "n": "Ka'ab" }, { "n": "Lu'ay" }, { "n": "Ghalib" },
+      { "n": "Fihr", "note": "Noble ancestor titled <em>Quraysh</em> — the title that became the name of the tribe." },
+      { "n": "Malik" },
+      { "n": "Nadhar", "note": "Original name <em>Qais</em>." },
+      { "n": "Kinanah" }, { "n": "Khuzaimah" },
+      { "n": "Mudrikah", "note": "Original name <em>Amir</em>." },
+      { "n": "Ilyas" }, { "n": "Mudhar" }, { "n": "Nizar" }, { "n": "Ma'ad" },
+      { "n": "Adnan", "key": true, "note": "The terminus of consensus agreed upon by all scholars and historians. All scholars agree Adnan is a descendant of Prophet Ishmael (p.b.u.h.)." }
+    ]
+  },
+  "diperselisihkan": {
+    "badge": "Part II",
+    "title": "Disputed Lineage",
+    "meta": "Gen. 21 → 58 (Adnan → Prophet Ishmael p.b.u.h.)",
+    "desc": "The second part contains scholarly variations regarding the number of generations and spelling of names (ranging from 7, 9, 15 to 40 names). However, all scholars agree that Adnan is a direct descendant of Prophet Ishmael (p.b.u.h.).",
+    "items": [
+      { "n": "Adnan", "key": true, "note": "Ancestor of the Arabized Arabs (Arab Musta'ribah). All scholars agree Adnan is a descendant of Prophet Ishmael (p.b.u.h.)." },
+      { "n": "Udad" }, { "n": "Humaisa'" }, { "n": "Salaman" }, { "n": "Awas" }, { "n": "Buz" }, { "n": "Qamwal" }, { "n": "Ubay" }, { "n": "Awwam" }, { "n": "Nasyid" }, { "n": "Haza" }, { "n": "Bildas" }, { "n": "Yadlaf" }, { "n": "Thabakh" }, { "n": "Jahim" }, { "n": "Nahisy" }, { "n": "Makhi" }, { "n": "Aifi" }, { "n": "Abqar" }, { "n": "Ubaid" }, { "n": "Ad-Da'a" }, { "n": "Hamdan" }, { "n": "Sanbir" }, { "n": "Yatsrabi" }, { "n": "Yahzin" }, { "n": "Yalhan" }, { "n": "Ar'awi" }, { "n": "Deysan" }, { "n": "Aysar" }, { "n": "Afnad" }, { "n": "Mukshir" }, { "n": "Nahats" }, { "n": "Zarih" }, { "n": "Sami" }, { "n": "Mizzi" }, { "n": "Awah" },
+      { "n": "Qaidar (Kedar)", "note": "Son of Prophet Ishmael (p.b.u.h.). His descendants expanded across the Arabian Peninsula." },
+      { "n": "Prophet Ishmael p.b.u.h.", "key": true, "note": "Son of Prophet Abraham (p.b.u.h.), builder of the Kaaba with his father & forefather of Arab Musta'ribah." }
+    ]
+  },
+  "tanpaRujukan": {
+    "badge": "Part III",
+    "title": "Lineage Without Definitive Reference",
+    "meta": "Gen. 58 → 78 (Prophet Ishmael p.b.u.h. → Prophet Adam p.b.u.h.)",
+    "desc": "The third part primarily derives from Judeo-Christian traditions (Isra'iliyyat). There are no authentic Quranic or Hadith texts confirming it, so Sheikh al-Mubarakfuri and most scholars refrain from stating it as established fact.",
+    "items": [
+      { "n": "Prophet Ishmael p.b.u.h.", "key": true, "note": "Son of Prophet Abraham (p.b.u.h.) from Lady Hagar." },
+      { "n": "Prophet Abraham p.b.u.h.", "key": true, "note": "Khalilullah (Friend of Allah), father of the Prophets." },
+      { "n": "Tarah (Azar)", "note": "Father of Prophet Abraham (p.b.u.h.)." },
+      { "n": "Nahor" }, { "n": "Serug" }, { "n": "Reu" }, { "n": "Peleg" },
+      { "n": "Eber", "note": "In ancient tradition connected as the origin of the name Hebrew." },
+      { "n": "Salah" }, { "n": "Arpakhsad" },
+      { "n": "Shem", "key": true, "note": "Son of Prophet Noah (p.b.u.h.). Primary ancestor of Semitic peoples." },
+      { "n": "Prophet Noah p.b.u.h.", "key": true, "note": "The first Messenger bringing divine law after idolatry appeared on earth." },
+      { "n": "Lamech" }, { "n": "Methuselah" },
+      { "n": "Enoch (Prophet Idris p.b.u.h.)", "key": true, "note": "Identified in Islamic tradition as Prophet Idris (p.b.u.h.)." },
+      { "n": "Jared" }, { "n": "Mahalalel" }, { "n": "Kenan" }, { "n": "Enosh" },
+      { "n": "Seth p.b.u.h.", "key": true, "note": "Son of Prophet Adam (p.b.u.h.) granted prophethood." },
+      { "n": "Prophet Adam p.b.u.h.", "key": true, "note": "The first human being & Father of all humanity created by Allah SWT." }
+    ]
+  },
+  "note": "Several names in the lineage have dual designations: <strong>Abdul Muttalib</strong> was originally named Syaibah, <strong>Hashim</strong> was Amr, <strong>Abdu Manaf</strong> was al-Mughirah, <strong>Qushay</strong> was Zaid, <strong>Nadhar</strong> was Qais, and <strong>Mudrikah</strong> was Amir. <strong>Fihr</strong> was the ancestor titled Quraysh — from whom the tribe derived its name.",
+  "source": "Ar-Rahiq al-Makhtum, Chapter I Part IV, pp. 56–57",
+  "genLabel": "Generation",
+  "clickDetail": "(click detail)",
+  "bin": "bin "
+}

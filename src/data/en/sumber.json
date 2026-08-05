@@ -1,0 +1,56 @@
+{
+  "eyebrow": "Documentation & Methodology",
+  "ar": "المَصَادِر وَالمَرَاجِع",
+  "h1": "Sirah Sources & References",
+  "lead": "This Sirah Nabawiyah application compiles narratives, chronological data, lineage, and significant events from authentic and recognized major sirah reference works.",
+  "backBtn": "← Back to Main App",
+  "kicker": "Primary References",
+  "title": "Reference Books Consulted",
+  "intro": "Here are the details of the historical and Hadith books serving as the foundation of this material:",
+  "cards": [
+    {
+      "meta": "Primary Chronological Reference",
+      "ttl": "Ar-Rahiq al-Makhtum (The Sealed Nectar)",
+      "author": "Sheikh Safiur-Rahman al-Mubarakpuri",
+      "desc": "First-prize winning Sirah book at the International Sunnah & Sirah Competition organized by the <em>Muslim World League</em> in Makkah. Serves as the primary chronological reference and section structure for this app."
+    },
+    {
+      "meta": "Classic Master Reference",
+      "ttl": "Sirah Nabawiyyah Ibn Hisham",
+      "author": "Abu Muhammad Abdul Malik bin Hisham (d. 218 AH)",
+      "desc": "A refined summary of <em>Kitab al-Maghazi</em> by Ibn Ishaq. It stands as the earliest and most authoritative complete Sirah work extant today."
+    },
+    {
+      "meta": "Guidance & Legal Rulings",
+      "ttl": "Zad al-Ma'ad fi Hadyi Khair al-'Ibad",
+      "author": "Imam Ibn Qayyim al-Jawziyyah (d. 751 AH)",
+      "desc": "A monumental work encompassing the guidance, legal rulings, worship practices, leadership, and ethics of Prophet Muhammad ﷺ in daily life and expeditions."
+    },
+    {
+      "meta": "Authentic Hadith Collections",
+      "ttl": "Sahih al-Bukhari & Sahih Muslim",
+      "author": "Imam al-Bukhari & Imam Muslim",
+      "desc": "The most authentic Hadith collections serving as primary references to verify event details, sermons, physical descriptions, and companions' interactions."
+    },
+    {
+      "meta": "Primary Historical Encyclopedia",
+      "ttl": "Tarikh ar-Rusul wal Muluk (Tarikh at-Tabari)",
+      "author": "Imam Abu Ja'far Muhammad bin Jarir at-Tabari (d. 310 AH)",
+      "desc": "Primary Islamic historical encyclopedia recording early narratives of prophetic history, Arab genealogy, and early Islamic milestones."
+    },
+    {
+      "meta": "Comprehensive Sirah Encyclopedia",
+      "ttl": "Subul al-Huda wa ar-Rashad",
+      "author": "Muhammad bin Yusuf as-Salihi ash-Shami (d. 942 AH)",
+      "desc": "One of the most extensive Sirah encyclopedias synthesizing reports from hundreds of earlier Sirah works."
+    }
+  ],
+  "methodology": {
+    "title": "Methodology Notes",
+    "points": [
+      "1. All content is adapted into clear and concise language for optimal readability on digital devices.",
+      "2. Page numbers and specific references cited refer to trusted translated editions.",
+      "3. This application serves as an educational introduction. For in-depth legal analysis and chain of narration, readers are advised to consult original texts with qualified scholars."
+    ]
+  }
+}

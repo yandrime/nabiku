@@ -1,0 +1,35 @@
+{
+  "kicker": "Part II",
+  "title": "Bani Hashim Family",
+  "intro": "The family of the Prophet is commonly known as the Hashimite family, named after his grandfather, Hashim bin Abdu Manaf. This was the clan entrusted with serving pilgrims in Makkah and who later endured the boycott to protect him.",
+  "treeContent": "family tree bani hashim abdul muttalib children of abdul muttalib syaibah hashim amr abdu manaf abdullah abu talib hamzah abbas abu lahab harith zubair ghaidaq muqawwim dhirar safiyyah syaffa ummu hakim barrah atikah arwa umaimah sons daughters",
+  "gen1Label": "Generation 1",
+  "gen1Name": "Hashim (Amr) bin Abdu Manaf",
+  "gen1Spouse": "married Salma bint Amr — Bani Adi bin Najjar, Yatsrib",
+  "gen2Label": "Generation 2",
+  "gen2Name": "Abdul Muttalib (Syaibah)",
+  "gen2Note": "born c. 497 CE · rediscoverer of the Zamzam well",
+  "gen3Label": "Generation 3 — Children of Abdul Muttalib",
+  "sonsLabel": "10 Sons",
+  "daughtersLabel": "6 Daughters",
+  "sons": [
+    { "name": "Abdullah", "meta": "<em>(father of Prophet)</em>", "variant": "g" },
+    { "name": "Abu Talib", "variant": "g" },
+    { "name": "Hamzah", "variant": "g" },
+    { "name": "Abbas", "variant": "g" },
+    { "name": "Abu Lahab", "variant": "r" },
+    { "name": "Harith" },
+    { "name": "Zubair" },
+    { "name": "Ghaidaq" },
+    { "name": "Muqawwim" },
+    { "name": "Dhirar" }
+  ],
+  "daughters": [
+    { "name": "Shafiyyah", "meta": "<em>(mother of Az-Zubair)</em>", "variant": "g" },
+    { "name": "Ash-Syaffa (Ummu Hakim)" },
+    { "name": "Barrah" },
+    { "name": "Atikah" },
+    { "name": "Arwa" },
+    { "name": "Umaimah" }
+  ]
+}

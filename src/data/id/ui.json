@@ -1,0 +1,25 @@
+{
+  "appTitle": "Sirah Nabawiyah",
+  "appSubtitle": "Media edukasi perjalanan hidup Rasulullah ﷺ.",
+  "menuBtn": "Daftar isi",
+  "searchPlaceholder": "Cari nama, peristiwa, atau tahun — misalnya “Khandaq”, “Hamzah”, “6 H”",
+  "searchActive": "Pencarian aktif",
+  "navLinks": [
+    { "href": "#beranda", "num": "—", "label": "Beranda" },
+    { "href": "#nasab", "num": "I", "label": "Nasab Rasulullah" },
+    { "href": "#bani-hasyim", "num": "II", "label": "Keluarga Bani Hasyim" },
+    { "href": "#istri", "num": "III", "label": "Istri-Istri Rasulullah" },
+    { "href": "#anak", "num": "IV", "label": "Putra-Putri Rasulullah" },
+    { "href": "#sebelum", "num": "V", "label": "Sebelum Kenabian" },
+    { "href": "#hijrah", "num": "VI", "label": "Hijrah ke Madinah" },
+    { "href": "#perang", "num": "VII", "label": "Seluruh Peperangan" },
+    { "href": "#sahabat", "num": "VIII", "label": "Hubungan dengan Sahabat" },
+    { "href": "#wafat", "num": "IX", "label": "Wafat Rasulullah" },
+    { "href": "/sumber", "num": "—", "label": "Sumber & Rujukan" }
+  ],
+  "railFooterHome": "Media edukasi perjalanan hidup Rasulullah ﷺ.",
+  "railFooterSumber": "Dokumentasi sumber rujukan sirah nabawiyah.",
+  "footerTitle": "Sirah Nabawiyah App",
+  "footerTagline": "Media edukasi interaktif sejarah dan perjalanan hidup Rasulullah ﷺ.",
+  "footerMeta": "Ringkasan edukatif · disadur dari berbagai sumber · rujuk ulama untuk kesimpulan hukum"
+}

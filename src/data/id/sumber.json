@@ -1,0 +1,56 @@
+{
+  "eyebrow": "Dokumentasi & Metodologi",
+  "ar": "المَصَادِر وَالمَرَاجِع",
+  "h1": "Sumber & Rujukan Sirah",
+  "lead": "Aplikasi Sirah Nabawiyah ini menyadur riwayat, data kronologi, silsilah, dan peristiwa-peristiwa penting dari berbagai kitab sirah induk dan rujukan yang shahih dan diakui oleh para ulama.",
+  "backBtn": "← Kembali ke Aplikasi Utama",
+  "kicker": "Rujukan Utama",
+  "title": "Kitab-Kitab Rujukan yang Disadur",
+  "intro": "Berikut adalah rincian kitab-kitab sejarah dan hadits yang menjadi landasan materi dalam aplikasi ini:",
+  "cards": [
+    {
+      "meta": "Rujukan Utama Kronologi",
+      "ttl": "Ar-Rahiq al-Makhtum",
+      "author": "Syaikh Shafiyurrahman al-Mubarakfuri",
+      "desc": "Kitab sirah pemenang peringkat pertama Sayembara Penulisan Sirah Nabawiyah Internasional yang diselenggarakan oleh <em>Rabithah Alam Islami</em> (Muslim World League) di Makkah Al-Mukarramah. Menjadi rujukan utama alur kronologi dan sistematika bab dalam aplikasi ini."
+    },
+    {
+      "meta": "Kitab Sirah Klasik Induk",
+      "ttl": "Sirah Nabawiyah Ibnu Hisyam",
+      "author": "Abu Muhammad Abdul Malik bin Hisyam (w. 218 H)",
+      "desc": "Ringkasan dan penyempurnaan dari <em>Kitab al-Maghazi</em> karya Ibnu Ishaq. Kitab ini merupakan karya sirah paling awal dan paling otoritatif yang sampai kepada kita hari ini secara utuh."
+    },
+    {
+      "meta": "Petunjuk & Hukum Sirah",
+      "ttl": "Zadul Ma'ad fi Hadyi Khairil Ibad",
+      "author": "Imam Ibnu Qayyim al-Jauziyyah (w. 751 H)",
+      "desc": "Karya monumental yang menghimpun seluruh petunjuk, hukum, tata cara ibadah, kepemimpinan, dan etika Rasulullah ﷺ dalam kehidupan sehari-hari maupun dalam peperangan."
+    },
+    {
+      "meta": "Kitab Hadits Shahih",
+      "ttl": "Shahih al-Bukhari & Shahih Muslim",
+      "author": "Imam al-Bukhari & Imam Muslim",
+      "desc": "Himpunan hadits-hadits dengan sanad paling shahih yang menjadi rujukan utama untuk memverifikasi riwayat peristiwa, khutbah, sifat-sifat fisik, serta hubungan Rasulullah ﷺ dengan para sahabat."
+    },
+    {
+      "meta": "Sejarah Induk",
+      "ttl": "Tarikh ar-Rusul wal Muluk (Tarikh at-Thabari)",
+      "author": "Imam Abu Ja'far Muhammad bin Jarir at-Thabari (w. 310 H)",
+      "desc": "Enciklopedia sejarah induk Islam yang merekam riwayat-riwayat awal kronologi perjalanan para nabi, garis keturunan bangsa Arab, serta peristiwa sejarah awal umat Islam."
+    },
+    {
+      "meta": "Enslikopedia Sirah Komprehensif",
+      "ttl": "Subul al-Huda wa ar-Rasyad",
+      "author": "Muhammad bin Yusuf as-Shalihi ash-Syami (w. 942 H)",
+      "desc": "Salah satu mahakarya ensiklopedia sirah paling luas yang menghimpun dan menyatukan riwayat-riwayat dari ratusan kitab sirah terdahulu."
+    }
+  ],
+  "methodology": {
+    "title": "Catatan Metodologi Penyaduran",
+    "points": [
+      "1. Seluruh materi disadur ulang dengan kalimat yang ringkas dan lugas agar mudah dibaca pada perangkat digital.",
+      "2. Nomor halaman atau referensi spesifik yang dicantumkan pada beberapa bagian mengacu pada edisi terjemahan Indonesia karya terpercaya.",
+      "3. Aplikasi ini berfungsi sebagai sarana perkenalan dan pengenalan umum. Untuk pendalaman hukum dan riwayat sanad yang lebih rinci, pembaca sangat dianjurkan untuk merujuk langsung kepada kitab-kitab aslinya bersama bimbingan para ulama."
+    ]
+  }
+}

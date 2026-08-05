@@ -3,29 +3,16 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface SidebarRailProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const NAV_LINKS = [
-  { href: '#beranda', num: '—', label: 'Beranda' },
-  { href: '#nasab', num: 'I', label: 'Nasab Rasulullah' },
-  { href: '#bani-hasyim', num: 'II', label: 'Keluarga Bani Hasyim' },
-  { href: '#ayah-ibu', num: 'III', label: 'Ayah, Ibu, Kakek, Paman' },
-  { href: '#sebelum', num: 'IV', label: 'Sebelum Kenabian' },
-  { href: '#kenabian', num: 'V', label: 'Kenabian & Dakwah Mekah' },
-  { href: '#hijrah', num: 'VI', label: 'Hijrah ke Madinah' },
-  { href: '#perang', num: 'VII', label: 'Seluruh Peperangan' },
-  { href: '#istri', num: 'VIII', label: 'Istri-Istri Rasulullah' },
-  { href: '#anak', num: 'IX', label: 'Putra-Putri Rasulullah' },
-  { href: '#sahabat', num: 'X', label: 'Hubungan dengan Sahabat' },
-  { href: '#wafat', num: 'XI', label: 'Wafat Rasulullah' },
-  { href: '/sumber', num: '—', label: 'Sumber & Rujukan' },
-];
-
 export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => {
+  const { data } = useLanguage();
+  const navLinks = data.ui.navLinks;
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string>('#beranda');
 
@@ -35,8 +22,9 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => 
       return;
     }
 
-    const sections = NAV_LINKS.filter(l => l.href.startsWith('#'))
-      .map(l => document.getElementById(l.href.slice(1)))
+    const sections = navLinks
+      .filter((l) => l.href.startsWith('#'))
+      .map((l) => document.getElementById(l.href.slice(1)))
       .filter(Boolean) as HTMLElement[];
 
     if ('IntersectionObserver' in window && sections.length > 0) {
@@ -54,7 +42,7 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => 
       sections.forEach((sec) => observer.observe(sec));
       return () => observer.disconnect();
     }
-  }, [pathname]);
+  }, [pathname, navLinks]);
 
   const handleLinkClick = () => {
     if (window.innerWidth <= 1000) {
@@ -78,10 +66,10 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => 
       >
         <div className="rail__brand">
           <div className="rail__ar">سيرة نبوية</div>
-          <div className="rail__title">Sirah Nabawiyah</div>
+          <div className="rail__title">{data.ui.appTitle}</div>
         </div>
         <div className="rail__nav" id="railNav">
-          {NAV_LINKS.map((link) => {
+          {navLinks.map((link) => {
             const isActive = isSumberPage
               ? link.href === '/sumber'
               : activeSection === link.href;
@@ -103,8 +91,8 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({ isOpen, onClose }) => 
         </div>
         <div className="rail__foot">
           {isSumberPage
-            ? 'Dokumentasi sumber rujukan sirah nabawiyah.'
-            : 'Media edukasi perjalanan hidup Rasulullah ﷺ.'}
+            ? data.ui.railFooterSumber
+            : data.ui.railFooterHome}
         </div>
       </nav>
     </>

@@ -1,0 +1,25 @@
+{
+  "appTitle": "Sirah Nabawiyah",
+  "appSubtitle": "Educational media on the life of Prophet Muhammad ﷺ.",
+  "menuBtn": "Contents",
+  "searchPlaceholder": "Search name, event, or year — e.g. “Khandaq”, “Hamzah”, “6 AH”",
+  "searchActive": "Search active",
+  "navLinks": [
+    { "href": "#beranda", "num": "—", "label": "Home" },
+    { "href": "#nasab", "num": "I", "label": "Lineage of the Prophet" },
+    { "href": "#bani-hasyim", "num": "II", "label": "Bani Hashim Family" },
+    { "href": "#istri", "num": "III", "label": "Wives of the Prophet" },
+    { "href": "#anak", "num": "IV", "label": "Children of the Prophet" },
+    { "href": "#sebelum", "num": "V", "label": "Before Prophethood" },
+    { "href": "#hijrah", "num": "VI", "label": "Migration to Madinah" },
+    { "href": "#perang", "num": "VII", "label": "All Expeditions & Battles" },
+    { "href": "#sahabat", "num": "VIII", "label": "Companions of the Prophet" },
+    { "href": "#wafat", "num": "IX", "label": "Passing of the Prophet" },
+    { "href": "/sumber", "num": "—", "label": "Sources & References" }
+  ],
+  "railFooterHome": "Educational media on the life journey of Prophet Muhammad ﷺ.",
+  "railFooterSumber": "Documentation of sources and references for Sirah Nabawiyah.",
+  "footerTitle": "Sirah Nabawiyah App",
+  "footerTagline": "Interactive educational media on the history and life of Prophet Muhammad ﷺ.",
+  "footerMeta": "Educational summary · compiled from authentic sources · consult scholars for legal rulings"
+}

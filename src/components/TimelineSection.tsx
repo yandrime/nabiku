@@ -1,30 +1,31 @@
+'use client';
+
 import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 import { TimelineItem } from '../types';
 
 interface TimelineSectionProps {
   id: string;
-  kicker: string;
-  title: string;
-  intro: string;
-  data: TimelineItem[];
+  sectionKey: 'sebelum' | 'hijrah' | 'wafat';
   searchQuery: string;
 }
 
 export const TimelineSection: React.FC<TimelineSectionProps> = ({
   id,
-  kicker,
-  title,
-  intro,
-  data,
+  sectionKey,
   searchQuery,
 }) => {
+  const { data } = useLanguage();
+  const sectionData = data.timeline[sectionKey];
+  const items = sectionData.items as TimelineItem[];
+
   const matchesSearch = (item: TimelineItem) => {
     if (!searchQuery) return true;
     const plain = `${item.y} ${item.t} ${item.d}`.toLowerCase();
     return plain.includes(searchQuery.toLowerCase());
   };
 
-  const filteredData = data.filter(matchesSearch);
+  const filteredData = items.filter(matchesSearch);
 
   if (searchQuery && filteredData.length === 0) {
     return null;
@@ -33,9 +34,9 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
   return (
     <section className="sec" id={id}>
       <div className="sec__head">
-        <span className="sec__kicker">{kicker}</span>
-        <h2 className="sec__h">{title}</h2>
-        <p className="sec__intro">{intro}</p>
+        <span className="sec__kicker">{sectionData.kicker}</span>
+        <h2 className="sec__h">{sectionData.title}</h2>
+        <p className="sec__intro">{sectionData.intro}</p>
         <div className="rule"></div>
       </div>
 

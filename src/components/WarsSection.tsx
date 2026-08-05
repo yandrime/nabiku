@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { WARS } from '../data/wars';
+import { useLanguage } from '@/context/LanguageContext';
 import { WarItem } from '../types';
 
 interface WarsSectionProps {
@@ -9,8 +9,12 @@ interface WarsSectionProps {
 }
 
 export const WarsSection: React.FC<WarsSectionProps> = ({ searchQuery }) => {
-  const [selectedYear, setSelectedYear] = useState<string>('Semua');
-  const years = ['Semua', ...Array.from(new Set(WARS.map((w) => w.y)))];
+  const { data } = useLanguage();
+  const warsData = data.wars;
+  const warsList = warsData.items as WarItem[];
+
+  const [selectedYear, setSelectedYear] = useState<string>('ALL');
+  const years = ['ALL', ...Array.from(new Set(warsList.map((w) => w.y)))];
 
   const matchesSearch = (w: WarItem) => {
     if (!searchQuery) return true;
@@ -19,12 +23,12 @@ export const WarsSection: React.FC<WarsSectionProps> = ({ searchQuery }) => {
   };
 
   const matchesYear = (w: WarItem) => {
-    if (selectedYear === 'Semua') return true;
+    if (selectedYear === 'ALL') return true;
     return w.y === selectedYear;
   };
 
-  const filteredWars = WARS.filter((w) => matchesSearch(w) && matchesYear(w));
-  const hasHits = WARS.some(matchesSearch);
+  const filteredWars = warsList.filter((w) => matchesSearch(w) && matchesYear(w));
+  const hasHits = warsList.some(matchesSearch);
 
   if (searchQuery && !hasHits) {
     return null;
@@ -33,11 +37,9 @@ export const WarsSection: React.FC<WarsSectionProps> = ({ searchQuery }) => {
   return (
     <section className="sec" id="perang">
       <div className="sec__head">
-        <span className="sec__kicker">Bagian VII</span>
-        <h2 className="sec__h">Seluruh Peperangan</h2>
-        <p className="sec__intro">
-          Dalam kurun sepuluh tahun Madinah, Rasulullah memimpin langsung 27 ghazwah dan mengutus puluhan sariyyah. Syaikh al-Mubarakfuri menegaskan bahwa sasaran utama peperangan dalam Islam bukan menghancurkan musuh, melainkan mencabut fitnah dan membuka jalan dakwah.
-        </p>
+        <span className="sec__kicker">{warsData.kicker}</span>
+        <h2 className="sec__h">{warsData.title}</h2>
+        <p className="sec__intro">{warsData.intro}</p>
         <div className="rule"></div>
       </div>
 
@@ -50,7 +52,7 @@ export const WarsSection: React.FC<WarsSectionProps> = ({ searchQuery }) => {
             type="button"
             onClick={() => setSelectedYear(y)}
           >
-            {y === 'Semua' ? 'Semua tahun' : y}
+            {y === 'ALL' ? warsData.filterAll : y}
           </button>
         ))}
       </div>
@@ -59,7 +61,7 @@ export const WarsSection: React.FC<WarsSectionProps> = ({ searchQuery }) => {
       <div id="warList">
         {filteredWars.map((w, idx) => {
           const tyClass = w.ty === 'sariyyah' ? 'war__ty--s' : 'war__ty--g';
-          const tyLabel = w.ty === 'sariyyah' ? 'Sariyyah' : w.ty === 'campuran' ? 'Rangkaian' : 'Ghazwah';
+          const tyLabel = warsData.labels[w.ty] || w.ty;
           const isOpen = searchQuery !== '';
 
           return (
@@ -83,7 +85,7 @@ export const WarsSection: React.FC<WarsSectionProps> = ({ searchQuery }) => {
 
         {filteredWars.length === 0 && (
           <div className="empty">
-            Tidak ada data peperangan pada filter tahun ini.
+            {warsData.emptyMessage}
           </div>
         )}
       </div>

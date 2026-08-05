@@ -1,0 +1,66 @@
+{
+  "kicker": "Bagian I",
+  "title": "Nasab Rasulullah ﷺ",
+  "intro": "Al-Mubarakfuri membagi nasab beliau menjadi tiga penggal. Penggal pertama — dari Muhammad sampai Adnan — disepakati seluruh ahli nasab. Penggal kedua, dari Adnan sampai Ismail, diperselisihkan. Penggal ketiga, dari Ibrahim sampai Adam, bersumber dari Ahli Kitab dan sengaja tidak dibahas penulis karena datanya tidak dapat dipastikan.",
+  "disepakati": {
+    "badge": "Penggal I",
+    "title": "Silsilah yang Disepakati",
+    "meta": "21 Generasi · Gen. 1 → 21 (Muhammad ﷺ → Adnan)",
+    "desc": "Penggal pertama disepakati secara ijma' oleh seluruh ulama, ahli sejarah, dan ahli nasab tanpa perselisihan. Urutan 21 generasi dari Rasulullah ﷺ hingga Adnan tercatat secara pasti dan shahih.",
+    "items": [
+      { "n": "Muhammad ﷺ", "key": true, "note": "Rasulullah, putra Abdullah. Lahir di Mekah pada Tahun Gajah (571 M)." },
+      { "n": "Abdullah", "note": "Ayahanda beliau. Wafat di Yatsrib sebelum Rasulullah ﷺ lahir." },
+      { "n": "Abdul Muthalib", "note": "Nama aslinya <em>Syaibah</em>. Kakek yang mengasuh beliau dan pimpinan terpandang Quraisy." },
+      { "n": "Hasyim", "note": "Nama aslinya <em>Amr</em>. Dari namanya lahir sebutan keluarga Hasyimiyah." },
+      { "n": "Abdu Manaf", "note": "Nama aslinya <em>al-Mughirah</em>. Pemimpin Quraisy yang sangat dihormati." },
+      { "n": "Qushay", "note": "Nama aslinya <em>Zaid</em>. Tokoh pemersatu kabilah Quraisy dan penguasa Ka'bah." },
+      { "n": "Kilab", "note": "Penyambung nasab dari garis ibu Rasulullah, Aminah binti Wahb." },
+      { "n": "Murrah" }, { "n": "Ka'ab" }, { "n": "Lu'ay" }, { "n": "Ghalib" },
+      { "n": "Fihr", "note": "Leluhur agung yang dijuluki <em>Quraisy</em> — julukan yang kemudian menjadi nama suku Quraisy." },
+      { "n": "Malik" },
+      { "n": "Nadhar", "note": "Nama aslinya <em>Qais</em>." },
+      { "n": "Kinanah" }, { "n": "Khuzaimah" },
+      { "n": "Mudrikah", "note": "Nama aslinya <em>Amir</em>." },
+      { "n": "Ilyas" }, { "n": "Mudhar" }, { "n": "Nizar" }, { "n": "Ma'ad" },
+      { "n": "Adnan", "key": true, "note": "Batas akhir nasab yang disepakati secara ijma' oleh seluruh ulama dan ahli sejarah. Seluruh ulama sepakat Adnan adalah keturunan Nabi Ismail a.s." }
+    ]
+  },
+  "diperselisihkan": {
+    "badge": "Penggal II",
+    "title": "Silsilah yang Diperselisihkan",
+    "meta": "Gen. 21 → 58 (Adnan → Nabi Ismail a.s.)",
+    "desc": "Penggal kedua diperselisihkan oleh para ahli nasab mengenai jumlah generasi dan ejaan nama (berkisar antara 7, 9, 15 hingga 40 nama). Namun seluruh ulama sepakat bahwa Adnan adalah keturunan langsung dari Nabi Ismail a.s.",
+    "items": [
+      { "n": "Adnan", "key": true, "note": "Leluhur bangsa Arab Musta'ribah. Seluruh ulama sepakat Adnan adalah keturunan Nabi Ismail a.s." },
+      { "n": "Udad" }, { "n": "Humaisa'" }, { "n": "Salaman" }, { "n": "Awas" }, { "n": "Buz" }, { "n": "Qamwal" }, { "n": "Ubay" }, { "n": "Awwam" }, { "n": "Nasyid" }, { "n": "Haza" }, { "n": "Bildas" }, { "n": "Yadlaf" }, { "n": "Thabakh" }, { "n": "Jahim" }, { "n": "Nahisy" }, { "n": "Makhi" }, { "n": "Aifi" }, { "n": "Abqar" }, { "n": "Ubaid" }, { "n": "Ad-Da'a" }, { "n": "Hamdan" }, { "n": "Sanbir" }, { "n": "Yatsrabi" }, { "n": "Yahzin" }, { "n": "Yalhan" }, { "n": "Ar'awi" }, { "n": "Deysan" }, { "n": "Aysar" }, { "n": "Afnad" }, { "n": "Mukshir" }, { "n": "Nahats" }, { "n": "Zarih" }, { "n": "Sami" }, { "n": "Mizzi" }, { "n": "Awah" },
+      { "n": "Qaidar (Kedar)", "note": "Putra Nabi Ismail a.s. Keturunannya berkembang pesat di wilayah jazirah Arab." },
+      { "n": "Nabi Ismail a.s.", "key": true, "note": "Putra Nabi Ibrahim a.s., pembangun Ka'bah bersama sang ayah & leluhur utama bangsa Arab Musta'ribah." }
+    ]
+  },
+  "tanpaRujukan": {
+    "badge": "Penggal III",
+    "title": "Silsilah yang Tidak Ada Rujukan Pastinya",
+    "meta": "Gen. 58 → 78 (Nabi Ismail a.s. → Nabi Adam a.s.)",
+    "desc": "Penggal ketiga bersumber utama dari tradisi Ahli Kitab (Israiliyat). Tidak ada nash shahih Al-Qur'an atau Hadits yang memastikannya, sehingga Syaikh al-Mubarakfuri dan mayoritas ulama memilih untuk tidak menguraikannya sebagai kepastian hukum.",
+    "items": [
+      { "n": "Nabi Ismail a.s.", "key": true, "note": "Putra Nabi Ibrahim a.s. dari Ibunda Hajar." },
+      { "n": "Nabi Ibrahim a.s.", "key": true, "note": "Khalilullah (kekasih Allah), bapak para Nabi." },
+      { "n": "Tarah (Azar)", "note": "Ayahanda Nabi Ibrahim a.s." },
+      { "n": "Nahor" }, { "n": "Serug" }, { "n": "Reu" }, { "n": "Peleg" },
+      { "n": "Eber", "note": "Dalam tradisi kuno dihubungkan sebagai asal penamaan bangsa Ibrani." },
+      { "n": "Salah" }, { "n": "Arpakhsad" },
+      { "n": "Sam", "key": true, "note": "Putra Nabi Nuh a.s. Leluhur utama bangsa Semit." },
+      { "n": "Nabi Nuh a.s.", "key": true, "note": "Rasul pertama pembawa syariat setelah terjadi kemusyrikan di muka bumi." },
+      { "n": "Lamekh" }, { "n": "Metusalah" },
+      { "n": "Henokh (Nabi Idris a.s.)", "key": true, "note": "Diidentifikasikan dalam tradisi Islam sebagai Nabi Idris a.s." },
+      { "n": "Yared" }, { "n": "Mahalaleel" }, { "n": "Kenan" }, { "n": "Enos" },
+      { "n": "Syits a.s.", "key": true, "note": "Putra Nabi Adam a.s. yang diberi karunia kenabian." },
+      { "n": "Nabi Adam a.s.", "key": true, "note": "Manusia pertama & Bapak seluruh umat manusia yang diciptakan Allah SWT." }
+    ]
+  },
+  "note": "Beberapa nama dalam silsilah punya dua penyebutan: <strong>Abdul Muthalib</strong> bernama asli Syaibah, <strong>Hasyim</strong> bernama asli Amr, <strong>Abdu Manaf</strong> bernama asli al-Mughirah, <strong>Qushay</strong> bernama asli Zaid, <strong>Nadhar</strong> bernama asli Qais, dan <strong>Mudrikah</strong> bernama asli Amir. Adapun <strong>Fihr</strong> adalah leluhur yang dijuluki Quraisy — dari sinilah nama kabilah itu berasal.",
+  "source": "Ar-Rahiq al-Makhtum, bab I bagian IV, hlm. 56–57",
+  "genLabel": "Generasi",
+  "clickDetail": "(klik detail)",
+  "bin": "bin "
+}

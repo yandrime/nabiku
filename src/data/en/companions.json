@@ -1,0 +1,22 @@
+{
+  "kicker": "Part VIII",
+  "title": "Companions of the Prophet",
+  "intro": "The first generation nurtured directly by Prophet Muhammad ﷺ — the Companions who shared his struggles, narrated his Sunnah, and bore great sacrifices to uphold Islam.",
+  "items": [
+    { "n": "Abu Bakr as-Siddiq", "d": "The closest companion, sole companion in Thawr Cave, father-in-law, and designated imam for prayer in his final days." },
+    { "n": "Umar bin Khattab", "d": "Embraced Islam in the sixth year of prophethood, empowering Muslims in Makkah. Father-in-law through Hafsah." },
+    { "n": "Uthman bin Affan", "d": "Married two of the Prophet's daughters sequentially, earning the title Dzun Nurain. Primary donor for the Tabuk expedition." },
+    { "n": "Ali bin Abu Talib", "d": "Cousin raised in the Prophet's house, son-in-law through Fathimah, and slept in his bed on the night of Hijrah." },
+    { "n": "Hamzah bin Abdul Muttalib", "d": "Paternal uncle and foster brother. Titled Lion of Allah and Master of Martyrs after falling at Uhud." },
+    { "n": "Zaid bin Harithah", "d": "Former slave who chose to remain with the Prophet over returning home. The only Companion explicitly named in the Quran." },
+    { "n": "Bilal bin Rabah", "d": "Endured desert torture for his faith, freed by Abu Bakr, and became the Prophet's Mu'adh-dhin." },
+    { "n": "Mus'ab bin Umair", "d": "The most refined youth of Makkah who gave up luxury; first envoy of Islam to Yatsrib and standard-bearer martyred at Uhud." },
+    { "n": "Salman al-Farisi", "d": "Traveled vast lands seeking truth. His strategic proposal to dig a trench saved Madinah during the Battle of Khandaq." },
+    { "n": "Sa'ad bin Mu'adh", "d": "Chieftain of the Aus tribe whose conversion brought his entire tribe to Islam in a single day. Passed from wounds at Khandaq." },
+    { "n": "Khalid bin Walid", "d": "Quraysh commander at Uhud who embraced Islam; saved the army at Mu'tah and was titled Saifullah (Sword of Allah)." },
+    { "n": "Abu Ubaidah bin Jarrah", "d": "Described by the Prophet as the trusted custodian of this Ummah — entrusted with matters demanding composure." },
+    { "n": "Abdullah bin Mas'ud", "d": "First to recite the Quran aloud before Quraysh; a foremost authority in recitation and tafsir." },
+    { "n": "Family of Yasir", "d": "Ammar, Yasir, and Sumayyah — subjected to severe torture in Makkah. Sumayyah became the first female martyr in Islam." },
+    { "n": "Anas bin Malik", "d": "Served the Prophet for ten years from childhood, serving as a close witness to his daily gentle character." }
+  ]
+}

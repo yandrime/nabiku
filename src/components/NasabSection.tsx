@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { NASAB_DISEPAKATI, NASAB_DIPERSELISIHKAN, NASAB_TANPA_RUJUKAN } from '../data/nasab';
+import { useLanguage } from '@/context/LanguageContext';
 import { NasabItem } from '../types';
 
 interface NasabSectionProps {
@@ -9,6 +9,9 @@ interface NasabSectionProps {
 }
 
 export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
+  const { data } = useLanguage();
+  const nasab = data.nasab;
+
   const [openAccordion, setOpenAccordion] = useState<Record<string, boolean>>({
     disepakati: true,
     diperselisihkan: false,
@@ -31,34 +34,45 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
     return searchAttr.includes(searchQuery.toLowerCase());
   };
 
-  const disepakatiMatches = NASAB_DISEPAKATI.filter(matchesSearch);
-  const diperselisihkanMatches = NASAB_DIPERSELISIHKAN.filter(matchesSearch);
-  const tanpaRujukanMatches = NASAB_TANPA_RUJUKAN.filter(matchesSearch);
+  const disepakatiItems = nasab.disepakati.items as NasabItem[];
+  const diperselisihkanItems = nasab.diperselisihkan.items as NasabItem[];
+  const tanpaRujukanItems = nasab.tanpaRujukan.items as NasabItem[];
 
-  const sectionHasHits = !searchQuery || disepakatiMatches.length > 0 || diperselisihkanMatches.length > 0 || tanpaRujukanMatches.length > 0;
+  const disepakatiMatches = disepakatiItems.filter(matchesSearch);
+  const diperselisihkanMatches = diperselisihkanItems.filter(matchesSearch);
+  const tanpaRujukanMatches = tanpaRujukanItems.filter(matchesSearch);
+
+  const sectionHasHits =
+    !searchQuery ||
+    disepakatiMatches.length > 0 ||
+    diperselisihkanMatches.length > 0 ||
+    tanpaRujukanMatches.length > 0;
 
   // Penomoran Generasi Berkelanjutan
   const offsetI = 0;
-  const offsetII = NASAB_DISEPAKATI.length - 1; // 20
-  const offsetIII = offsetII + NASAB_DIPERSELISIHKAN.length - 1; // 57
+  const offsetII = disepakatiItems.length - 1;
+  const offsetIII = offsetII + diperselisihkanItems.length - 1;
 
   if (!sectionHasHits) return null;
 
   return (
     <section className="sec" id="nasab">
       <div className="sec__head">
-        <span className="sec__kicker">Bagian I</span>
-        <h2 className="sec__h">Nasab Rasulullah ﷺ</h2>
-        <p className="sec__intro">
-          Al-Mubarakfuri membagi nasab beliau menjadi tiga penggal. Penggal pertama — dari Muhammad sampai Adnan — disepakati seluruh ahli nasab. Penggal kedua, dari Adnan sampai Ismail, diperselisihkan. Penggal ketiga, dari Ibrahim sampai Adam, bersumber dari Ahli Kitab dan sengaja tidak dibahas penulis karena datanya tidak dapat dipastikan.
-        </p>
+        <span className="sec__kicker">{nasab.kicker}</span>
+        <h2 className="sec__h">{nasab.title}</h2>
+        <p className="sec__intro">{nasab.intro}</p>
         <div className="rule"></div>
       </div>
 
       <div className="acc-group">
         {/* ACCORDION 1: DISEPAKATI */}
         {(searchQuery === '' || disepakatiMatches.length > 0) && (
-          <div className={`acc-item ${openAccordion.disepakati || searchQuery !== '' ? 'is-open' : ''}`} id="accDisepakati">
+          <div
+            className={`acc-item ${
+              openAccordion.disepakati || searchQuery !== '' ? 'is-open' : ''
+            }`}
+            id="accDisepakati"
+          >
             <button
               className="acc-header"
               type="button"
@@ -66,11 +80,13 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
               onClick={() => toggleAccordion('disepakati')}
             >
               <div className="acc-header__left">
-                <span className="acc-header__badge acc-header__badge--gold">Penggal I</span>
-                <h3 className="acc-header__title">Silsilah yang Disepakati</h3>
+                <span className="acc-header__badge acc-header__badge--gold">
+                  {nasab.disepakati.badge}
+                </span>
+                <h3 className="acc-header__title">{nasab.disepakati.title}</h3>
               </div>
               <div className="acc-header__right">
-                <span>21 Generasi · Gen. 1 → 21 (Muhammad ﷺ → Adnan)</span>
+                <span>{nasab.disepakati.meta}</span>
                 <svg
                   className="acc-header__icon"
                   viewBox="0 0 24 24"
@@ -85,17 +101,20 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
               </div>
             </button>
             <div className="acc-body" id="panelDisepakati">
-              <p className="acc-body__desc">
-                Penggal pertama disepakati secara ijma&apos; oleh seluruh ulama, ahli sejarah, dan ahli nasab tanpa perselisihan. Urutan 21 generasi dari Rasulullah ﷺ hingga Adnan tercatat secara pasti dan shahih.
-              </p>
+              <p className="acc-body__desc">{nasab.disepakati.desc}</p>
               <ul className="chain">
-                {NASAB_DISEPAKATI.map((x, i) => {
+                {disepakatiItems.map((x, i) => {
                   if (!matchesSearch(x)) return null;
                   const nodeId = `disepakati-${i}`;
                   const isOpenNode = openNodes[nodeId];
                   const genNum = offsetI + i + 1;
                   return (
-                    <li key={nodeId} className={`node ${x.key ? 'is-key' : ''} ${isOpenNode ? 'is-open' : ''}`}>
+                    <li
+                      key={nodeId}
+                      className={`node ${x.key ? 'is-key' : ''} ${
+                        isOpenNode ? 'is-open' : ''
+                      }`}
+                    >
                       <span className="node__dot" aria-hidden="true"></span>
                       <button
                         className="node__btn"
@@ -104,10 +123,18 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                         aria-expanded={isOpenNode}
                         onClick={() => x.note && toggleNode(nodeId)}
                       >
-                        <span className="node__num">Generasi {genNum}</span>
-                        {i > 0 && <span style={{ opacity: 0.5, fontSize: '0.82em' }}>bin </span>}
+                        <span className="node__num">
+                          {nasab.genLabel} {genNum}
+                        </span>
+                        {i > 0 && (
+                          <span style={{ opacity: 0.5, fontSize: '0.82em' }}>
+                            {nasab.bin}
+                          </span>
+                        )}
                         {x.n}
-                        {x.note && <span className="node__hint">(klik detail)</span>}
+                        {x.note && (
+                          <span className="node__hint">{nasab.clickDetail}</span>
+                        )}
                       </button>
                       {x.note && (
                         <div
@@ -125,7 +152,12 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
 
         {/* ACCORDION 2: DIPERSELISIHKAN */}
         {(searchQuery === '' || diperselisihkanMatches.length > 0) && (
-          <div className={`acc-item ${openAccordion.diperselisihkan || searchQuery !== '' ? 'is-open' : ''}`} id="accDiperselisihkan">
+          <div
+            className={`acc-item ${
+              openAccordion.diperselisihkan || searchQuery !== '' ? 'is-open' : ''
+            }`}
+            id="accDiperselisihkan"
+          >
             <button
               className="acc-header"
               type="button"
@@ -133,11 +165,13 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
               onClick={() => toggleAccordion('diperselisihkan')}
             >
               <div className="acc-header__left">
-                <span className="acc-header__badge acc-header__badge--warn">Penggal II</span>
-                <h3 className="acc-header__title">Silsilah yang Diperselisihkan</h3>
+                <span className="acc-header__badge acc-header__badge--warn">
+                  {nasab.diperselisihkan.badge}
+                </span>
+                <h3 className="acc-header__title">{nasab.diperselisihkan.title}</h3>
               </div>
               <div className="acc-header__right">
-                <span>Gen. 21 → 58 (Adnan → Nabi Ismail a.s.)</span>
+                <span>{nasab.diperselisihkan.meta}</span>
                 <svg
                   className="acc-header__icon"
                   viewBox="0 0 24 24"
@@ -152,17 +186,20 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
               </div>
             </button>
             <div className="acc-body" id="panelDiperselisihkan">
-              <p className="acc-body__desc">
-                Penggal kedua diperselisihkan oleh para ahli nasab mengenai jumlah generasi dan ejaan nama (berkisar antara 7, 9, 15 hingga 40 nama). Namun seluruh ulama sepakat bahwa Adnan adalah keturunan langsung dari Nabi Ismail a.s.
-              </p>
+              <p className="acc-body__desc">{nasab.diperselisihkan.desc}</p>
               <ul className="chain">
-                {NASAB_DIPERSELISIHKAN.map((x, i) => {
+                {diperselisihkanItems.map((x, i) => {
                   if (!matchesSearch(x)) return null;
                   const nodeId = `diperselisihkan-${i}`;
                   const isOpenNode = openNodes[nodeId];
                   const genNum = offsetII + i + 1;
                   return (
-                    <li key={nodeId} className={`node ${x.key ? 'is-key' : ''} ${isOpenNode ? 'is-open' : ''}`}>
+                    <li
+                      key={nodeId}
+                      className={`node ${x.key ? 'is-key' : ''} ${
+                        isOpenNode ? 'is-open' : ''
+                      }`}
+                    >
                       <span className="node__dot" aria-hidden="true"></span>
                       <button
                         className="node__btn"
@@ -171,10 +208,18 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                         aria-expanded={isOpenNode}
                         onClick={() => x.note && toggleNode(nodeId)}
                       >
-                        <span className="node__num">Generasi {genNum}</span>
-                        {i > 0 && <span style={{ opacity: 0.5, fontSize: '0.82em' }}>bin </span>}
+                        <span className="node__num">
+                          {nasab.genLabel} {genNum}
+                        </span>
+                        {i > 0 && (
+                          <span style={{ opacity: 0.5, fontSize: '0.82em' }}>
+                            {nasab.bin}
+                          </span>
+                        )}
                         {x.n}
-                        {x.note && <span className="node__hint">(klik detail)</span>}
+                        {x.note && (
+                          <span className="node__hint">{nasab.clickDetail}</span>
+                        )}
                       </button>
                       {x.note && (
                         <div
@@ -192,7 +237,12 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
 
         {/* ACCORDION 3: TANPA RUJUKAN PASTI */}
         {(searchQuery === '' || tanpaRujukanMatches.length > 0) && (
-          <div className={`acc-item ${openAccordion.tanpaRujukan || searchQuery !== '' ? 'is-open' : ''}`} id="accTanpaRujukan">
+          <div
+            className={`acc-item ${
+              openAccordion.tanpaRujukan || searchQuery !== '' ? 'is-open' : ''
+            }`}
+            id="accTanpaRujukan"
+          >
             <button
               className="acc-header"
               type="button"
@@ -200,11 +250,13 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
               onClick={() => toggleAccordion('tanpaRujukan')}
             >
               <div className="acc-header__left">
-                <span className="acc-header__badge acc-header__badge--muted">Penggal III</span>
-                <h3 className="acc-header__title">Silsilah yang Tidak Ada Rujukan Pastinya</h3>
+                <span className="acc-header__badge acc-header__badge--muted">
+                  {nasab.tanpaRujukan.badge}
+                </span>
+                <h3 className="acc-header__title">{nasab.tanpaRujukan.title}</h3>
               </div>
               <div className="acc-header__right">
-                <span>Gen. 58 → 78 (Nabi Ismail a.s. → Nabi Adam a.s.)</span>
+                <span>{nasab.tanpaRujukan.meta}</span>
                 <svg
                   className="acc-header__icon"
                   viewBox="0 0 24 24"
@@ -219,17 +271,20 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
               </div>
             </button>
             <div className="acc-body" id="panelTanpaRujukan">
-              <p className="acc-body__desc">
-                Penggal ketiga bersumber utama dari tradisi Ahli Kitab (Israiliyat). Tidak ada nash shahih Al-Qur&apos;an atau Hadits yang memastikannya, sehingga Syaikh al-Mubarakfuri dan mayoritas ulama memilih untuk tidak menguraikannya sebagai kepastian hukum.
-              </p>
+              <p className="acc-body__desc">{nasab.tanpaRujukan.desc}</p>
               <ul className="chain">
-                {NASAB_TANPA_RUJUKAN.map((x, i) => {
+                {tanpaRujukanItems.map((x, i) => {
                   if (!matchesSearch(x)) return null;
                   const nodeId = `tanpaRujukan-${i}`;
                   const isOpenNode = openNodes[nodeId];
                   const genNum = offsetIII + i + 1;
                   return (
-                    <li key={nodeId} className={`node ${x.key ? 'is-key' : ''} ${isOpenNode ? 'is-open' : ''}`}>
+                    <li
+                      key={nodeId}
+                      className={`node ${x.key ? 'is-key' : ''} ${
+                        isOpenNode ? 'is-open' : ''
+                      }`}
+                    >
                       <span className="node__dot" aria-hidden="true"></span>
                       <button
                         className="node__btn"
@@ -238,10 +293,18 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
                         aria-expanded={isOpenNode}
                         onClick={() => x.note && toggleNode(nodeId)}
                       >
-                        <span className="node__num">Generasi {genNum}</span>
-                        {i > 0 && <span style={{ opacity: 0.5, fontSize: '0.82em' }}>bin </span>}
+                        <span className="node__num">
+                          {nasab.genLabel} {genNum}
+                        </span>
+                        {i > 0 && (
+                          <span style={{ opacity: 0.5, fontSize: '0.82em' }}>
+                            {nasab.bin}
+                          </span>
+                        )}
                         {x.n}
-                        {x.note && <span className="node__hint">(klik detail)</span>}
+                        {x.note && (
+                          <span className="node__hint">{nasab.clickDetail}</span>
+                        )}
                       </button>
                       {x.note && (
                         <div
@@ -258,10 +321,12 @@ export const NasabSection: React.FC<NasabSectionProps> = ({ searchQuery }) => {
         )}
       </div>
 
-      <div className="note">
-        Beberapa nama dalam silsilah punya dua penyebutan: <strong>Abdul Muthalib</strong> bernama asli Syaibah, <strong>Hasyim</strong> bernama asli Amr, <strong>Abdu Manaf</strong> bernama asli al-Mughirah, <strong>Qushay</strong> bernama asli Zaid, <strong>Nadhar</strong> bernama asli Qais, dan <strong>Mudrikah</strong> bernama asli Amir. Adapun <strong>Fihr</strong> adalah leluhur yang dijuluki Quraisy — dari sinilah nama kabilah itu berasal.
-        <div className="src" style={{ marginTop: '8px' }}>Ar-Rahiq al-Makhtum, bab I bagian IV, hlm. 56–57</div>
-      </div>
+      <div
+        className="note"
+        dangerouslySetInnerHTML={{
+          __html: `${nasab.note}<div class="src" style="margin-top: 8px;">${nasab.source}</div>`,
+        }}
+      />
     </section>
   );
 };
